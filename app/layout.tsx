@@ -10,11 +10,11 @@ export const metadata: Metadata = {
     template: "%s | Boston Scientific Research Center"
   },
   description:
-    "Boston Scientific Research Center is an independent United States-based scientific research and academic support organisation focused on evidence-driven inquiry, interdisciplinary scholarship, and globally connected collaboration.",
+    "Boston Scientific Research Center is a United States-based scientific and academic center focused on evidence-driven inquiry, interdisciplinary scholarship, and globally connected collaboration.",
   openGraph: {
     title: "Boston Scientific Research Center",
     description:
-      "Institutional website for Boston Scientific Research Center, a globally connected scientific research and academic support organisation.",
+      "Website for Boston Scientific Research Center, a globally connected scientific and academic center.",
     url: "https://www.bostonsrc.org",
     siteName: "Boston Scientific Research Center",
     type: "website"
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Boston Scientific Research Center",
     description:
-      "Independent scientific research and academic support shaped by rigor, restraint, and global scholarly collaboration."
+      "Scientific inquiry and interdisciplinary scholarship shaped by rigor, restraint, and global academic collaboration."
   }
 };
 

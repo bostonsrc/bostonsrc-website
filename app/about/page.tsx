@@ -9,15 +9,15 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About BSR"
-        title="An institutional platform shaped by scientific integrity and intellectual restraint."
-        intro="Boston Scientific Research Center is designed to operate with the clarity, seriousness, and global orientation expected of a contemporary research institution."
+        title="A research center shaped by scientific integrity and intellectual restraint."
+        intro="Boston Scientific Research Center is designed to operate with the clarity, seriousness, and global orientation expected of a contemporary academic center."
       />
 
       <section className="section">
         <div className="shell narrative-grid">
           <article className="narrative-card">
             <p className="eyebrow">Vision</p>
-            <h2 className="section-title">To strengthen globally connected scholarship through disciplined institutional practice.</h2>
+            <h2 className="section-title">To strengthen globally connected scholarship through disciplined scholarly practice.</h2>
             <p>
               BSR envisions a research environment in which evidence, thoughtful methodology, and
               international collaboration converge to create enduring scholarly value.
@@ -25,10 +25,10 @@ export default function AboutPage() {
           </article>
           <article className="narrative-card">
             <p className="eyebrow">Mission</p>
-            <h2 className="section-title">To support research, education, and scientific communication with credibility and care.</h2>
+            <h2 className="section-title">To advance research, education, and scientific communication with credibility and care.</h2>
             <p>
-              Our mission is to advance evidence-driven work through academic support,
-              interdisciplinary partnership, editorial quality, and carefully governed innovation.
+              Our mission is to advance evidence-driven scholarship through interdisciplinary
+              research culture, editorial quality, and carefully governed innovation.
             </p>
           </article>
         </div>
@@ -47,9 +47,9 @@ export default function AboutPage() {
               proportionate in its claims.
             </p>
             <p>
-              This philosophy informs our work in evidence synthesis, scientific writing,
-              educational development, and AI-enabled scholarly workflows. Digital acceleration is
-              useful only when it preserves academic judgement and strengthens the integrity of
+              This philosophy informs our work in evidence synthesis, scientific communication,
+              educational development, and carefully governed digital scholarship. Digital
+              acceleration is useful only when it preserves academic judgement and strengthens the integrity of
               outcomes.
             </p>
           </div>
@@ -65,13 +65,14 @@ export default function AboutPage() {
           <div className="prose">
             <p>
               BSR is built with a global outlook, recognising that significant scholarship often
-              emerges from distributed expertise, cross-border exchange, and institutionally
-              coherent collaboration models.
+              emerges from distributed expertise, cross-border exchange, and coherent
+              center-led collaboration.
             </p>
             <p>
-              Our institutional language, service structure, and research posture are intentionally
-              designed to be legible across international academic settings while remaining grounded
-              in a disciplined United States-based legal and organisational framework.
+              Our public language, organisational structure, and research posture are
+              intentionally designed to be legible across international academic settings while
+              remaining grounded in a disciplined United States-based legal and organisational
+              framework.
             </p>
           </div>
         </div>
@@ -83,7 +84,7 @@ export default function AboutPage() {
             <h3>Commitment to Scientific Integrity</h3>
             <p>
               We prioritise methodological accountability, ethical scholarly conduct, and
-              proportionate scientific communication in every institutional engagement.
+              proportionate scientific communication in every center engagement.
             </p>
           </article>
           <article className="card">
@@ -96,7 +97,7 @@ export default function AboutPage() {
           <article className="card">
             <h3>Editorial Culture</h3>
             <p>
-              BSR values thoughtful language, measured presentation, and institutional coherence as
+              BSR values thoughtful language, measured presentation, and organisational coherence as
               part of scientific credibility rather than decoration around it.
             </p>
           </article>

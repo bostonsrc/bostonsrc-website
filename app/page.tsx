@@ -1,85 +1,48 @@
 import Link from "next/link";
-import {
-  advisoryProfiles,
-  collaborationPoints,
-  homeHighlights,
-  institution,
-  philosophyPoints,
-  publicationPrograms
-} from "@/lib/site-content";
+import { collaborationPoints, homeHighlights, philosophyPoints } from "@/lib/site-content";
 
 export default function HomePage() {
   return (
     <>
       <section className="hero section">
         <div className="shell hero__grid">
-          <div>
-            <p className="eyebrow">Independent Research Institution</p>
+          <div className="hero__content">
+            <p className="eyebrow">Boston Scientific Research Center</p>
             <h1 className="display-title">
               Advancing scientific inquiry, interdisciplinary scholarship, and evidence-driven
               innovation through globally connected research ecosystems.
             </h1>
             <p className="lead">
-              Boston Scientific Research Center is a United States-based institutional platform for
-              scholarly collaboration, research support, and academically serious innovation across
-              science, education, and evidence development.
+              Boston Scientific Research Center is a United States-based academic and scientific
+              center devoted to research development, interdisciplinary scholarship, and
+              internationally engaged knowledge production across science, education, and evidence
+              studies.
             </p>
             <div className="hero__actions">
               <Link className="button" href="/about">
-                Explore the institution
+                Explore the center
               </Link>
               <Link className="button button--secondary" href="/contact">
                 Contact BSR
               </Link>
             </div>
           </div>
-          <aside className="hero-card">
-            <p className="eyebrow">Official Details</p>
-            <dl className="detail-list">
-              <div>
-                <dt>Legal name</dt>
-                <dd>{institution.legalName}</dd>
-              </div>
-              <div>
-                <dt>Registered office</dt>
-                <dd>
-                  {institution.addressLine1}
-                  <br />
-                  {institution.addressLine2}
-                  <br />
-                  {institution.country}
-                </dd>
-              </div>
-              <div>
-                <dt>Wyoming Original ID</dt>
-                <dd>{institution.originalId}</dd>
-              </div>
-              <div>
-                <dt>Website</dt>
-                <dd>
-                  <a href={institution.website} target="_blank" rel="noreferrer">
-                    www.bostonsrc.org
-                  </a>
-                </dd>
-              </div>
-            </dl>
-          </aside>
         </div>
       </section>
 
       <section className="section section--bordered">
         <div className="shell stats-row">
           <div>
-            <span className="stat-label">Institutional posture</span>
-            <strong>Independent and editorially grounded</strong>
+            <span className="stat-label">Center profile</span>
+            <strong>Research-centered and academically grounded</strong>
           </div>
           <div>
-            <span className="stat-label">Operating model</span>
-            <strong>Interdisciplinary and globally collaborative</strong>
+            <span className="stat-label">Scholarly model</span>
+            <strong>Interdisciplinary, international, and evidence-led</strong>
           </div>
           <div>
-            <span className="stat-label">Core emphasis</span>
-            <strong>Research rigor, academic support, scientific integrity</strong>
+            <span className="stat-label">Research emphasis</span>
+            <strong>Scientific rigor, methodological depth, and scholarly integrity</strong>
           </div>
         </div>
       </section>
@@ -87,22 +50,22 @@ export default function HomePage() {
       <section className="section">
         <div className="shell two-column">
           <div>
-            <p className="eyebrow">Institutional Overview</p>
+            <p className="eyebrow">Center Overview</p>
             <h2 className="section-title">
               A scholarly environment designed for credibility, clarity, and enduring relevance.
             </h2>
           </div>
           <div className="prose">
             <p>
-              BSR is designed to serve as a modern research institution with a restrained,
+              BSR is designed to serve as a modern research center with a restrained,
               internationally legible identity. Its focus is not promotional spectacle, but the
               disciplined cultivation of scientific quality, thoughtful collaboration, and
               future-aware scholarly systems.
             </p>
             <p>
-              The organisation combines research consultation, editorial strength, and
-              interdisciplinary partnership to support evidence-driven work across academic and
-              professional settings.
+              The center brings together research development, editorial discipline, and
+              interdisciplinary academic exchange to strengthen evidence-driven work across
+              center-led and scholarly environments.
             </p>
           </div>
         </div>
@@ -136,11 +99,8 @@ export default function HomePage() {
           <div className="section-heading">
             <div>
               <p className="eyebrow">Featured Initiatives</p>
-              <h2 className="section-title">Priority domains that define the institutional agenda.</h2>
+              <h2 className="section-title">Priority domains that define the center&apos;s academic agenda.</h2>
             </div>
-            <Link className="text-link" href="/research-innovation">
-              View all research areas
-            </Link>
           </div>
           <div className="card-grid">
             {homeHighlights.map((item) => (
@@ -154,58 +114,10 @@ export default function HomePage() {
       </section>
 
       <section className="section section--bordered">
-        <div className="shell two-column">
-          <div>
-            <p className="eyebrow">Publications Highlight</p>
-            <h2 className="section-title">An institutional record oriented toward rigor and impact.</h2>
-          </div>
-          <div className="stack-list">
-            {publicationPrograms.slice(0, 3).map((item) => (
-              <article className="stack-item" key={item.category}>
-                <h3>{item.category}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="shell">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">Scientific Advisory Board</p>
-              <h2 className="section-title">
-                Governance designed for scholarly quality and international perspective.
-              </h2>
-            </div>
-            <Link className="text-link" href="/advisory-board">
-              Review advisory structure
-            </Link>
-          </div>
-          <div className="board-grid">
-            {advisoryProfiles.map((profile) => (
-              <article className="board-card" key={`${profile.title}-${profile.country}`}>
-                <p className="board-card__name">{profile.name}</p>
-                <p className="board-card__meta">
-                  {profile.title}
-                  <br />
-                  {profile.institution}
-                  <br />
-                  {profile.country}
-                </p>
-                <p>{profile.bio}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section section--bordered">
         <div className="shell cta-block">
           <div>
-            <p className="eyebrow">Institutional Contact</p>
-            <h2 className="section-title">Engage BSR for research, collaboration, or academic support.</h2>
+            <p className="eyebrow">Center Contact</p>
+            <h2 className="section-title">Engage BSR for research, collaboration, or center dialogue.</h2>
             <p className="lead lead--compact">
               We welcome inquiries from researchers, institutions, educational leaders, and
               internationally minded collaborators.
@@ -215,8 +127,8 @@ export default function HomePage() {
             <Link className="button" href="/contact">
               Start a conversation
             </Link>
-            <Link className="button button--secondary" href="/services">
-              Review services
+            <Link className="button button--secondary" href="/leadership-team">
+              View leadership
             </Link>
           </div>
         </div>

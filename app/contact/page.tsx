@@ -11,15 +11,15 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Professional contact for institutional inquiries, collaboration, and scholarly engagement."
-        intro="Use the form below to contact BSR regarding research support, advisory collaboration, publications, or institutional partnership."
+        title="Professional contact for center inquiries, collaboration, and scholarly engagement."
+        intro="Use the form below to contact BSR regarding center collaboration, academic engagement, leadership communication, or scholarly partnership."
       />
 
       <section className="section">
         <div className="shell contact-grid">
           <div className="contact-panel">
             <p className="eyebrow">Inquiries</p>
-            <h2 className="section-title">Contact the institution</h2>
+            <h2 className="section-title">Contact center</h2>
             <ContactForm />
           </div>
           <aside className="contact-panel contact-panel--secondary">
@@ -45,9 +45,11 @@ export default function ContactPage() {
               </a>
             </p>
             <p>
-              <strong>Wyoming Original ID</strong>
+              <strong>LinkedIn</strong>
               <br />
-              {institution.originalId}
+              <a href={institution.linkedin} target="_blank" rel="noreferrer">
+                Boston Scientific Research Center
+              </a>
             </p>
             <div className="map-frame">
               <iframe

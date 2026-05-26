@@ -7,16 +7,15 @@ export const institution = {
   country: "USA",
   originalId: "2026-001987303",
   website: "https://www.bostonsrc.org",
-  email: "office@bostonsrc.org"
+  email: "office@bostonsrc.org",
+  linkedin: "https://www.linkedin.com/company/bostonsrc"
 };
 
 export const navigation = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/research-innovation", label: "Research & Innovation" },
-  { href: "/publications-projects", label: "Publications & Projects" },
-  { href: "/advisory-board", label: "Scientific Advisory Board" },
-  { href: "/services", label: "Services" },
+  { href: "/leadership-team", label: "Leadership & Team" },
+  { href: "/services", label: "Center Areas" },
   { href: "/contact", label: "Contact" }
 ];
 
@@ -45,7 +44,7 @@ export const collaborationPoints = [
   "Cross-border research relationships",
   "Editorial and methodological collaboration",
   "Health professions education partnerships",
-  "Institutional capacity-building initiatives"
+  "Center capacity-building initiatives"
 ];
 
 export const researchAreas = [
@@ -81,24 +80,61 @@ export const researchAreas = [
 
 export const publicationPrograms = [
   {
-    category: "Journal Publications",
-    text: "Peer-reviewed manuscripts, evidence reviews, methodological contributions, and interdisciplinary scholarly outputs developed with rigorous editorial standards."
+    category: "Research Program Development",
+    text: "Institutional workstreams designed to support evidence-led inquiry, research design, and long-range scholarly development."
   },
   {
-    category: "Guidelines Initiatives",
-    text: "Structured evidence support for institutional frameworks, consensus-oriented work, and knowledge translation initiatives."
+    category: "Scholarly Initiatives",
+    text: "Developing initiatives in research culture, methodological strength, and academically serious knowledge exchange."
   },
   {
     category: "Collaborative Projects",
     text: "Multi-party academic and research programs spanning health, education, methodology, and scientific communication."
   },
   {
-    category: "Ongoing Scholarly Work",
-    text: "Active pipelines in review development, academic writing, curriculum innovation, and institutional research capacity building."
+    category: "Ongoing Workstreams",
+    text: "Structured areas of ongoing work in evidence development, curriculum innovation, and institutional research capacity building."
   },
   {
     category: "International Partnerships",
     text: "Cross-border collaborations designed to connect expertise, strengthen scholarly output, and support globally relevant research activity."
+  }
+];
+
+export const leadershipProfiles = [
+  {
+    name: "Waqar M. Naqvi",
+    role: "Scientific Director",
+    institution: "Boston Scientific Research Center",
+    image: "/waqar-naqvi.png",
+    credentials:
+      "PhD (Health Professions Education), PhD (Physiotherapy), International FAIMER Fellow, FIAP",
+    bio: "Waqar M. Naqvi is an international scholar, educator, and research leader whose work spans health professions education, evidence synthesis, generative AI in academic systems, and interdisciplinary research development. Across leadership appointments in Qatar, the UAE, India, Saudi Arabia, and Cameroon, he has built research mentoring systems, strengthened postgraduate supervision, and advanced institution-wide scholarly culture.",
+    highlights: [
+      "200+ publications, 1,800+ citations, h-index 22, and four granted patents",
+      "Led the PhyCARE international reporting guideline, published in BMJ Open and listed on the EQUATOR Network",
+      "International FAIMER Fellow focused on evidence synthesis, AI integration, and scalable learning systems"
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/waqarnaqvi/"
+  }
+];
+
+export const teamProfiles = [
+  {
+    name: "Team Member to Be Added",
+    role: "Research Associate",
+    bio: "Placeholder for a short professional summary, field of work, and contribution to the center."
+  },
+  {
+    name: "Team Member to Be Added",
+    role: "Scholarly Programs Coordinator",
+    bio: "Placeholder for a concise profile describing academic coordination, program support, or institutional responsibilities."
+  },
+  {
+    name: "Team Member to Be Added",
+    role: "Research Development Fellow",
+    bio: "Placeholder for a short profile that can later include training background, current focus, and research interests."
   }
 ];
 
@@ -128,12 +164,20 @@ export const advisoryProfiles = [
 
 export const services = [
   {
-    title: "Research Consultation",
-    text: "Strategic guidance for project conception, design decisions, evidence pathways, and scholarly planning."
+    title: "Research Development",
+    text: "Support for project conception, study design planning, evidence pathways, and coherent scholarly execution."
   },
   {
-    title: "Scientific Writing Support",
-    text: "Structured support for manuscripts, evidence reports, proposals, and publication-oriented academic documents."
+    title: "Faculty Development Program",
+    text: "Structured academic development for faculty, clinicians, and educators through scholarly mentoring, educational growth, and research-centered professional advancement."
+  },
+  {
+    title: "Scientific Communication",
+    text: "Support for manuscripts, evidence reports, proposals, and the clear presentation of scientific work."
+  },
+  {
+    title: "Scientific Engagement",
+    text: "Scholarly dialogue, academic exchange, and center-led participation in research and education communities."
   },
   {
     title: "Academic Mentorship",
@@ -141,7 +185,11 @@ export const services = [
   },
   {
     title: "Research Capacity Building",
-    text: "Institutional capability strengthening through methodology support, workflow design, and scholarly systems development."
+    text: "Methodology strengthening, workflow support, and training structures that improve research capability across teams."
+  },
+  {
+    title: "Research Ecosystem Buildup",
+    text: "Long-range cultivation of research culture, governance, and academically coherent systems across the center."
   },
   {
     title: "AI-enabled Scholarly Workflows",
@@ -152,7 +200,11 @@ export const services = [
     text: "Program design and pedagogical support for health and professional education environments."
   },
   {
-    title: "International Collaboration Support",
-    text: "Frameworks for cross-border academic cooperation, communication alignment, and research partnership delivery."
+    title: "Global Research Partnerships",
+    text: "Cross-border academic partnerships built around shared scholarly priorities, communication alignment, and long-term cooperation."
+  },
+  {
+    title: "Collaborative Networks",
+    text: "Ongoing relationship-building across researchers, educators, and academic partners to support joint initiatives and scholarly exchange."
   }
 ];

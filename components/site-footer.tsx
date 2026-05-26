@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Wordmark } from "@/components/wordmark";
 import { institution, navigation } from "@/lib/site-content";
 
 export function SiteFooter() {
@@ -6,14 +7,15 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="shell site-footer__grid">
         <div>
-          <p className="eyebrow">Boston Scientific Research Center</p>
+          <div className="site-footer__brand">
+            <Wordmark compact />
+          </div>
           <p className="footer-copy">
-            Independent scientific research and academic support with an editorially driven,
-            internationally oriented institutional posture.
+            Scientific inquiry, interdisciplinary scholarship, and globally oriented academic collaboration.
           </p>
         </div>
         <div>
-          <p className="footer-heading">Institution</p>
+          <p className="footer-heading">Registered Office</p>
           <p className="footer-copy">
             {institution.legalName}
             <br />
@@ -33,7 +35,9 @@ export function SiteFooter() {
               www.bostonsrc.org
             </a>
             <br />
-            Wyoming Original ID: {institution.originalId}
+            <a href={institution.linkedin} target="_blank" rel="noreferrer">
+              LinkedIn: Boston Scientific Research Center
+            </a>
           </p>
         </div>
         <div>

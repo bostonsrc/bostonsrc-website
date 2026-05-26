@@ -2,16 +2,16 @@ import { PageHero } from "@/components/page-hero";
 import { services } from "@/lib/site-content";
 
 export const metadata = {
-  title: "Services"
+  title: "Center Areas"
 };
 
 export default function ServicesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Services"
-        title="Institutional support services for research, academic development, and scholarly communication."
-        intro="BSR provides a focused service offering designed to strengthen research quality, educational development, and globally connected academic work."
+        eyebrow="Center Areas"
+        title="Academic focus areas across research, faculty growth, scientific communication, and collaboration."
+        intro="These areas reflect how BSR develops scholarly culture, supports faculty and research growth, and builds academically serious collaborations."
       />
 
       <section className="section">
@@ -33,14 +33,13 @@ export default function ServicesPage() {
           </div>
           <div className="prose">
             <p>
-              Services are presented as institutional capabilities rather than commercialised
-              product packages. This keeps the tone aligned with globally respected academic and
-              research organisations.
+              These areas are presented as academic priorities rather than commercial offerings.
+              This keeps the tone aligned with globally respected research centers and scholarly
+              organisations.
             </p>
             <p>
-              The framework also supports future expansion into programme pages, consultation
-              workflows, or CMS-driven service details without changing the site’s overall
-              character.
+              The framework can expand later into program pages, centers of focus, or CMS-driven
+              detail without changing the center&apos;s overall character.
             </p>
           </div>
         </div>
