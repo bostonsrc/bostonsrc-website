@@ -72,15 +72,21 @@ export default function LeadershipTeamPage() {
               <article className="profile-feature" key={primaryLeader.role}>
                 <div className="profile-feature__media">
                   {primaryLeader.image ? (
-                    <div className="profile-photo-frame">
-                      <Image
-                        alt={primaryLeader.name}
-                        className="profile-photo"
-                        fill
-                        sizes="(max-width: 820px) 100vw, 240px"
-                        src={primaryLeader.image}
+                    <>
+                      <div className="profile-photo-frame">
+                        <Image
+                          alt={primaryLeader.name}
+                          className="profile-photo"
+                          fill
+                          sizes="(max-width: 820px) 100vw, 240px"
+                          src={primaryLeader.image}
+                        />
+                      </div>
+                      <LinkedInIconLink
+                        href={"linkedinUrl" in primaryLeader ? primaryLeader.linkedinUrl : undefined}
+                        label={`${primaryLeader.name} LinkedIn profile`}
                       />
-                    </div>
+                    </>
                   ) : (
                     <div className="profile-photo-placeholder" aria-hidden="true">
                       Photo
@@ -104,10 +110,6 @@ export default function LeadershipTeamPage() {
                       ))}
                     </ul>
                   ) : null}
-                  <LinkedInIconLink
-                    href={"linkedinUrl" in primaryLeader ? primaryLeader.linkedinUrl : undefined}
-                    label={`${primaryLeader.name} LinkedIn profile`}
-                  />
                 </div>
               </article>
             </div>
