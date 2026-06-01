@@ -15,9 +15,10 @@ export default function LeadershipTeamPage() {
         eyebrow="Leadership & International Advisory Council"
         title="Leadership and international academic guidance."
         intro="This section introduces the leadership of Boston Scientific Research Center and the international advisory expertise contributing to its scholarly vision, research culture, and global outlook."
+        compact
       />
 
-      <section className="section">
+      <section className="section section--tight-top">
         <div className="shell">
           <div className="two-up">
             <article className="card">
@@ -103,25 +104,44 @@ export default function LeadershipTeamPage() {
           ) : null}
 
           {supportingLeadership.length ? (
-            <div className="profile-grid profile-grid--leadership">
+            <div className="profile-feature-list">
               {supportingLeadership.map((profile) => (
-                <article className="card profile-card profile-card--leadership" key={profile.role}>
-                  <p className="eyebrow">{profile.role}</p>
-                  <h3 className="section-title section-title--small">{profile.name}</h3>
-                  <p className="profile-meta">{profile.institution}</p>
-                  <p>{profile.bio}</p>
-                  {"linkedinUrl" in profile && profile.linkedinUrl && profile.linkedinLabel ? (
-                    <p>
-                      <a
-                        className="text-link"
-                        href={profile.linkedinUrl}
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        {profile.linkedinLabel}
-                      </a>
-                    </p>
-                  ) : null}
+                <article className="profile-feature" key={profile.role}>
+                  <div className="profile-feature__media">
+                    {profile.image ? (
+                      <div className="profile-photo-frame">
+                        <Image
+                          alt={profile.name}
+                          className="profile-photo"
+                          fill
+                          sizes="(max-width: 820px) 100vw, 240px"
+                          src={profile.image}
+                        />
+                      </div>
+                    ) : (
+                      <div className="profile-photo-placeholder" aria-hidden="true">
+                        Photo
+                      </div>
+                    )}
+                  </div>
+                  <div className="profile-feature__content">
+                    <p className="eyebrow">{profile.role}</p>
+                    <h3 className="section-title section-title--small">{profile.name}</h3>
+                    <p className="profile-meta">{profile.institution}</p>
+                    <p>{profile.bio}</p>
+                    {"linkedinUrl" in profile && profile.linkedinUrl && profile.linkedinLabel ? (
+                      <p>
+                        <a
+                          className="text-link"
+                          href={profile.linkedinUrl}
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          {profile.linkedinLabel}
+                        </a>
+                      </p>
+                    ) : null}
+                  </div>
                 </article>
               ))}
             </div>

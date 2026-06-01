@@ -63,6 +63,10 @@ main {
   padding: 5.5rem 0;
 }
 
+.section--tight-top {
+  padding-top: 3.5rem;
+}
+
 .section--bordered {
   border-top: 1px solid var(--line);
 }
@@ -601,9 +605,17 @@ main {
   padding-bottom: 3.5rem;
 }
 
+.page-hero--compact {
+  padding-bottom: 2rem;
+}
+
 .page-hero__inner {
   border-bottom: 1px solid var(--line);
   padding-bottom: 3rem;
+}
+
+.page-hero--compact .page-hero__inner {
+  padding-bottom: 2.1rem;
 }
 
 .narrative-grid {
