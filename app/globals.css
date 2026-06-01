@@ -472,6 +472,11 @@ main {
   gap: 1.5rem;
 }
 
+.profile-card {
+  display: flex;
+  flex-direction: column;
+}
+
 .profile-photo-placeholder {
   display: flex;
   align-items: center;
@@ -507,6 +512,14 @@ main {
   width: min(100%, var(--profile-photo-width));
   aspect-ratio: 4 / 5;
   margin-bottom: 1.25rem;
+}
+
+.profile-card .section-title {
+  min-height: 2.5em;
+}
+
+.profile-card .profile-meta {
+  min-height: 4.9em;
 }
 
 .profile-card__photo-frame,

@@ -143,6 +143,23 @@ export const advisoryProfiles = [
     ],
     linkedinLabel: "LinkedIn profile",
     linkedinUrl: "https://www.linkedin.com/in/joshua-zadro-b12533159/"
+  },
+  {
+    name: "Shahnawaz Anwer",
+    title: "Research Assistant Professor (Sports Science and Musculoskeletal Health)",
+    institution: "The Hong Kong Polytechnic University",
+    country: "Hong Kong",
+    image: "/shahnawaz-anwer.jpg",
+    bio: "Dr. Shahnawaz Anwer is a Research Assistant Professor in the Department of Rehabilitation Sciences at The Hong Kong Polytechnic University and PEDro Representative for Asia East (Hong Kong). Recognised as a Stanford University World Top 2% Researcher in Rehabilitation for three consecutive years, he holds a PhD from The Hong Kong Polytechnic University and has published more than 135 peer-reviewed articles with an h-index of 40 and over 5,000 citations. His work spans ergonomics, wearable sensor technology, occupational health, work-related musculoskeletal disorders, and rehabilitation, and he also contributes as a senior collaborator to the Global Burden of Disease study at the University of Washington.",
+    expertise: [
+      "Ergonomics",
+      "Musculoskeletal disorders",
+      "Wearable sensors",
+      "Occupational health and safety",
+      "Rehabilitation"
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/dr-shahnawaz-anwer-phd-84593933/"
   }
 ];
 
