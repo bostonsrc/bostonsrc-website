@@ -14,7 +14,7 @@ export const institution = {
 export const navigation = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/leadership-team", label: "Leadership & Team" },
+  { href: "/leadership-team", label: "Leadership & Council" },
   { href: "/services", label: "Center Areas" },
   { href: "/contact", label: "Contact" }
 ];
@@ -109,7 +109,7 @@ export const leadershipProfiles = [
     image: "/waqar-naqvi.png",
     credentials:
       "PhD (Health Professions Education), PhD (Physiotherapy), International FAIMER Fellow, FIAP",
-    bio: "Waqar M. Naqvi is an international scholar, educator, and research leader whose work spans health professions education, evidence synthesis, generative AI in academic systems, and interdisciplinary research development. Across leadership appointments in Qatar, the UAE, India, Saudi Arabia, and Cameroon, he has built research mentoring systems, strengthened postgraduate supervision, and advanced institution-wide scholarly culture.",
+    bio: "Waqar M. Naqvi is an international scholar, educator, and research leader whose work spans health professions education, evidence synthesis, generative AI in academic systems, and interdisciplinary research development. Through academic, research, and collaborative work across the Gulf region, India, Saudi Arabia, and Cameroon, he has contributed to research mentoring systems, strengthened postgraduate supervision, and supported the development of scholarly culture across diverse educational and health contexts.",
     highlights: [
       "200+ publications, 1,800+ citations, h-index 22, and four granted patents",
       "Led the PhyCARE international reporting guideline, published in BMJ Open and listed on the EQUATOR Network",
@@ -117,48 +117,32 @@ export const leadershipProfiles = [
     ],
     linkedinLabel: "LinkedIn profile",
     linkedinUrl: "https://www.linkedin.com/in/waqarnaqvi/"
-  }
-];
-
-export const teamProfiles = [
-  {
-    name: "Team Member to Be Added",
-    role: "Research Associate",
-    bio: "Placeholder for a short professional summary, field of work, and contribution to the center."
   },
   {
-    name: "Team Member to Be Added",
-    role: "Scholarly Programs Coordinator",
-    bio: "Placeholder for a concise profile describing academic coordination, program support, or institutional responsibilities."
-  },
-  {
-    name: "Team Member to Be Added",
-    role: "Research Development Fellow",
-    bio: "Placeholder for a short profile that can later include training background, current focus, and research interests."
+    name: "Aishwarya A. Pashine",
+    role: "Strategic Operations & Coordination",
+    institution: "Boston Scientific Research Center",
+    bio: "Aishwarya A. Pashine supports strategic operations, coordination, and cross-functional organization across the center's developing activities. Her role is oriented toward helping structure internal workflows, communication continuity, and the practical coordination needed for research, partnership, and program-facing initiatives."
   }
 ];
 
 export const advisoryProfiles = [
   {
-    name: "Profile to Be Announced",
-    title: "Scientific Advisory Appointment",
-    institution: "Evidence and research leadership profile in development",
-    country: "International",
-    bio: "BSR is establishing an advisory structure that brings together internationally minded expertise in evidence synthesis, scholarly quality, and interdisciplinary research governance."
-  },
-  {
-    name: "Profile to Be Announced",
-    title: "Academic Advisory Appointment",
-    institution: "Health professions education collaboration in development",
-    country: "International",
-    bio: "The advisory model is being designed to reflect academic seriousness, cross-institutional trust, and a balanced perspective on scholarship, pedagogy, and innovation."
-  },
-  {
-    name: "Profile to Be Announced",
-    title: "Methodology Advisory Appointment",
-    institution: "Research methodology and scientific communication profile in development",
-    country: "International",
-    bio: "Advisory membership will support methodological depth, editorial integrity, and high standards for institutional decision-making across research initiatives."
+    name: "Joshua Zadro",
+    title: "Associate Professor",
+    institution: "The University of Sydney",
+    country: "Australia",
+    image: "/joshua-zadro.jpg",
+    bio: "Associate Professor Josh Zadro is a University of Sydney Robinson Fellow and physiotherapist within the Discipline of Physiotherapy, School of Health Sciences, Faculty of Medicine and Health. He completed his PhD at The University of Sydney in 2017, focusing on the relationship between physical activity and low back pain. His work examines equitable digital and hybrid models of care for musculoskeletal conditions and strategies to reduce the overuse of low-value care. He has published more than 150 peer-reviewed articles, secured major competitive funding, delivered over 100 conference presentations, and received multiple distinguished research awards.",
+    expertise: [
+      "Musculoskeletal pain",
+      "Digital health",
+      "Clinical trials",
+      "Orthopaedics",
+      "Health services research"
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/joshua-zadro-b12533159/"
   }
 ];
 

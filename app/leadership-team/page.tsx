@@ -1,45 +1,37 @@
 import Image from "next/image";
 import { PageHero } from "@/components/page-hero";
-import { leadershipProfiles } from "@/lib/site-content";
+import { advisoryProfiles, leadershipProfiles } from "@/lib/site-content";
 
 export const metadata = {
-  title: "Leadership & Team"
+  title: "Leadership & International Advisory Council"
 };
 
 export default function LeadershipTeamPage() {
   return (
     <>
       <PageHero
-        eyebrow="Leadership & Team"
-        title="Leadership, core team, and advisory participation."
-        intro="This section presents the people guiding the direction, research culture, and academic identity of Boston Scientific Research Center."
+        eyebrow="Leadership & International Advisory Council"
+        title="Leadership and international academic guidance."
+        intro="This section introduces the leadership of Boston Scientific Research Center and the international advisory expertise contributing to its scholarly vision, research culture, and global outlook."
       />
 
       <section className="section">
         <div className="shell">
-          <div className="three-up">
+          <div className="two-up">
             <article className="card">
               <p className="eyebrow">Leadership</p>
-              <h2 className="section-title section-title--small">Center direction and academic stewardship.</h2>
+              <h2 className="section-title section-title--small">Center direction and strategic stewardship.</h2>
               <p>
-                Senior leadership is presented with academic credentials, professional background,
-                and selected scholarly highlights.
+                Leadership profiles present the individuals guiding the center's academic
+                direction, strategic operations, and developing collaborations.
               </p>
             </article>
             <article className="card">
-              <p className="eyebrow">Core Team</p>
-              <h2 className="section-title section-title--small">Internal team members and operational contributors.</h2>
+              <p className="eyebrow">International Advisory Council</p>
+              <h2 className="section-title section-title--small">International scholarly guidance and perspective.</h2>
               <p>
-                Core team appointments will appear here as the center expands its academic and
-                operational structure.
-              </p>
-            </article>
-            <article className="card">
-              <p className="eyebrow">Advisors</p>
-              <h2 className="section-title section-title--small">Advisory participation and scholarly guidance.</h2>
-              <p>
-                Advisory participation is being developed to support methodological depth,
-                scholarly perspective, and international collaboration.
+                Council members bring disciplinary depth, international perspective, and
+                trusted academic insight to the center's evolving research agenda.
               </p>
             </article>
           </div>
@@ -50,8 +42,8 @@ export default function LeadershipTeamPage() {
         <div className="shell">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Scientific Director</p>
-              <h2 className="section-title">Leadership profile</h2>
+              <p className="eyebrow">Leadership</p>
+              <h2 className="section-title">Leadership profiles</h2>
             </div>
           </div>
           <div className="profile-feature-list">
@@ -89,7 +81,7 @@ export default function LeadershipTeamPage() {
                       ))}
                     </ul>
                   ) : null}
-                  {"linkedinUrl" in profile && profile.linkedinUrl ? (
+                  {"linkedinUrl" in profile && profile.linkedinUrl && profile.linkedinLabel ? (
                     <p>
                       <a
                         className="text-link"
@@ -100,29 +92,10 @@ export default function LeadershipTeamPage() {
                         {profile.linkedinLabel}
                       </a>
                     </p>
-                  ) : (
-                    <p className="text-link">{profile.linkedinLabel}</p>
-                  )}
+                  ) : null}
                 </div>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="shell">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">Core Team</p>
-              <h2 className="section-title">Core team appointments</h2>
-            </div>
-          </div>
-          <div className="prose">
-            <p>
-              As the center grows, this section will introduce team members responsible for
-              research coordination, academic operations, and program development.
-            </p>
           </div>
         </div>
       </section>
@@ -131,16 +104,52 @@ export default function LeadershipTeamPage() {
         <div className="shell">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Advisors</p>
-              <h2 className="section-title">Advisory development</h2>
+              <p className="eyebrow">International Advisory Council</p>
             </div>
           </div>
-          <div className="prose">
-            <p>
-              The advisory structure is being developed to reflect scholarly seriousness,
-              interdisciplinary perspective, and international academic trust. Advisor profiles
-              will be introduced as appointments are finalized.
-            </p>
+          <div className="profile-grid">
+            {advisoryProfiles.map((profile) => (
+              <article className="card profile-card" key={profile.name}>
+                {profile.image ? (
+                  <div className="profile-card__photo-frame">
+                    <Image
+                      alt={profile.name}
+                      className="profile-photo"
+                      fill
+                      sizes="(max-width: 820px) 100vw, 320px"
+                      src={profile.image}
+                    />
+                  </div>
+                ) : null}
+                <p className="eyebrow">{profile.country}</p>
+                <h3 className="section-title section-title--small">{profile.name}</h3>
+                <p className="profile-meta">
+                  {profile.title}
+                  <br />
+                  {profile.institution}
+                </p>
+                <p>{profile.bio}</p>
+                {"expertise" in profile && profile.expertise ? (
+                  <ul className="editorial-list profile-highlights">
+                    {profile.expertise.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                ) : null}
+                {"linkedinUrl" in profile && profile.linkedinUrl ? (
+                  <p>
+                    <a
+                      className="text-link"
+                      href={profile.linkedinUrl}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {profile.linkedinLabel}
+                    </a>
+                  </p>
+                ) : null}
+              </article>
+            ))}
           </div>
         </div>
       </section>
