@@ -550,6 +550,21 @@ main {
   font-size: 0.93rem;
 }
 
+.profile-title-line,
+.profile-affiliation {
+  display: block;
+}
+
+.profile-title-line {
+  margin-bottom: 0.2rem;
+}
+
+.profile-affiliation {
+  color: var(--ink);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
 .profile-credentials {
   margin: 0 0 1rem;
   color: var(--accent);

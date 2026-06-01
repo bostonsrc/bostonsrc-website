@@ -145,6 +145,23 @@ export const advisoryProfiles = [
     linkedinUrl: "https://www.linkedin.com/in/joshua-zadro-b12533159/"
   },
   {
+    name: "Mehrunishah Begum",
+    title: "Senior Lecturer and Program Director, Postgraduate Business Administration in Healthcare Management",
+    institution: "IMU University, School of Business and Technology",
+    country: "Malaysia",
+    image: "/mehrunishah-begum.jpeg",
+    bio: "Dr. Mehrunishah Begum is a Senior Lecturer and Program Director at IMU University, Malaysia, with more than two decades of experience spanning academia, research, and consultancy. She holds a PhD in Management and has supervised 10 PhD candidates to completion. Her work covers entrepreneurship, human resource management, sustainable leadership, and organisational behaviour. She has contributed to policy-level research as a national researcher for the Human Resource Development Corporation of Malaysia, with work touching social security, labour markets, and Industry 4.0, and she also serves as a PhD and DBA examiner across universities in Malaysia, India, Pakistan, Bangladesh, and the UAE.",
+    expertise: [
+      "Entrepreneurship",
+      "Human resource management",
+      "Sustainable leadership",
+      "Organisational behaviour",
+      "International business"
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/drmehrunishah/"
+  },
+  {
     name: "Shahnawaz Anwer",
     title: "Research Assistant Professor (Sports Science and Musculoskeletal Health)",
     institution: "The Hong Kong Polytechnic University",

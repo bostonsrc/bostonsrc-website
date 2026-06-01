@@ -72,7 +72,9 @@ export default function LeadershipTeamPage() {
                 <div className="profile-feature__content">
                   <p className="eyebrow">{primaryLeader.role}</p>
                   <h2 className="section-title section-title--small">{primaryLeader.name}</h2>
-                  <p className="profile-meta">{primaryLeader.institution}</p>
+                  <p className="profile-meta">
+                    <span className="profile-affiliation">{primaryLeader.institution}</span>
+                  </p>
                   {"credentials" in primaryLeader && primaryLeader.credentials ? (
                     <p className="profile-credentials">{primaryLeader.credentials}</p>
                   ) : null}
@@ -127,7 +129,9 @@ export default function LeadershipTeamPage() {
                   <div className="profile-feature__content">
                     <p className="eyebrow">{profile.role}</p>
                     <h3 className="section-title section-title--small">{profile.name}</h3>
-                    <p className="profile-meta">{profile.institution}</p>
+                    <p className="profile-meta">
+                      <span className="profile-affiliation">{profile.institution}</span>
+                    </p>
                     <p>{profile.bio}</p>
                     {"linkedinUrl" in profile && profile.linkedinUrl && profile.linkedinLabel ? (
                       <p>
@@ -173,9 +177,8 @@ export default function LeadershipTeamPage() {
                 <p className="eyebrow">{profile.country}</p>
                 <h3 className="section-title section-title--small">{profile.name}</h3>
                 <p className="profile-meta">
-                  {profile.title}
-                  <br />
-                  {profile.institution}
+                  <span className="profile-title-line">{profile.title}</span>
+                  <span className="profile-affiliation">{profile.institution}</span>
                 </p>
                 <p>{profile.bio}</p>
                 {"expertise" in profile && profile.expertise ? (
