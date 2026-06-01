@@ -123,7 +123,8 @@ export const leadershipProfiles = [
     role: "Strategic Operations & Coordination",
     institution: "Boston Scientific Research Center",
     image: "/aishwarya-pashine.png",
-    bio: "Aishwarya A. Pashine is an interdisciplinary health science researcher and cardiovascular and pulmonary physiotherapist currently pursuing her PhD in Medical Simulation. She is a co-developer of the PhyCARE international reporting guideline published in BMJ Open and listed on the EQUATOR Network. At BSRC, she supports strategic operations, coordination, and communication continuity across the center's research and partnership activities."
+    bio: "Aishwarya A. Pashine is an interdisciplinary health science researcher and cardiovascular and pulmonary physiotherapist currently pursuing her PhD in Medical Simulation. She is a co-developer of the PhyCARE international reporting guideline published in BMJ Open and listed on the EQUATOR Network. At BSRC, she supports strategic operations, coordination, and communication continuity across the center's research and partnership activities.",
+    linkedinUrl: "https://www.linkedin.com/in/aishwarya-a-pashine-2b29b9246/"
   }
 ];
 
