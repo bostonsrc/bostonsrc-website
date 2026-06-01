@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { collaborationPoints, homeHighlights, philosophyPoints } from "@/lib/site-content";
 
@@ -5,7 +6,7 @@ export default function HomePage() {
   return (
     <>
       <section className="hero section">
-        <div className="shell hero__grid">
+        <div className="shell hero__grid hero__grid--editorial">
           <div className="hero__content">
             <p className="eyebrow">Boston Scientific Research Center</p>
             <h1 className="display-title">
@@ -25,6 +26,18 @@ export default function HomePage() {
               <Link className="button button--secondary" href="/contact">
                 Contact BSR
               </Link>
+            </div>
+          </div>
+          <div className="hero__media">
+            <div className="hero__image-frame">
+              <Image
+                alt="Architectural skyline with waterfront buildings"
+                className="hero__image"
+                fill
+                priority
+                sizes="(max-width: 820px) 100vw, 38vw"
+                src="/home-hero-boston.jpg"
+              />
             </div>
           </div>
         </div>
