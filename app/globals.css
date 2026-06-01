@@ -477,6 +477,14 @@ main {
   flex-direction: column;
 }
 
+.profile-grid--leadership {
+  margin-top: 1.5rem;
+}
+
+.profile-card--leadership {
+  justify-content: flex-start;
+}
+
 .profile-photo-placeholder {
   display: flex;
   align-items: center;
@@ -547,6 +555,24 @@ main {
 
 .profile-highlights {
   margin-top: 1rem;
+}
+
+.expertise-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.expertise-list li {
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.3;
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .team-grid {

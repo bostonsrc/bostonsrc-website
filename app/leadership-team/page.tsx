@@ -7,6 +7,8 @@ export const metadata = {
 };
 
 export default function LeadershipTeamPage() {
+  const [primaryLeader, ...supportingLeadership] = leadershipProfiles;
+
   return (
     <>
       <PageHero
@@ -46,18 +48,18 @@ export default function LeadershipTeamPage() {
               <h2 className="section-title">Leadership profiles</h2>
             </div>
           </div>
-          <div className="profile-feature-list">
-            {leadershipProfiles.map((profile) => (
-              <article className="profile-feature" key={profile.role}>
+          {primaryLeader ? (
+            <div className="profile-feature-list">
+              <article className="profile-feature" key={primaryLeader.role}>
                 <div className="profile-feature__media">
-                  {profile.image ? (
+                  {primaryLeader.image ? (
                     <div className="profile-photo-frame">
                       <Image
-                        alt={profile.name}
+                        alt={primaryLeader.name}
                         className="profile-photo"
                         fill
                         sizes="(max-width: 820px) 100vw, 240px"
-                        src={profile.image}
+                        src={primaryLeader.image}
                       />
                     </div>
                   ) : (
@@ -67,20 +69,47 @@ export default function LeadershipTeamPage() {
                   )}
                 </div>
                 <div className="profile-feature__content">
-                  <p className="eyebrow">{profile.role}</p>
-                  <h2 className="section-title section-title--small">{profile.name}</h2>
-                  <p className="profile-meta">{profile.institution}</p>
-                  {"credentials" in profile && profile.credentials ? (
-                    <p className="profile-credentials">{profile.credentials}</p>
+                  <p className="eyebrow">{primaryLeader.role}</p>
+                  <h2 className="section-title section-title--small">{primaryLeader.name}</h2>
+                  <p className="profile-meta">{primaryLeader.institution}</p>
+                  {"credentials" in primaryLeader && primaryLeader.credentials ? (
+                    <p className="profile-credentials">{primaryLeader.credentials}</p>
                   ) : null}
-                  <p>{profile.bio}</p>
-                  {"highlights" in profile && profile.highlights ? (
+                  <p>{primaryLeader.bio}</p>
+                  {"highlights" in primaryLeader && primaryLeader.highlights ? (
                     <ul className="editorial-list profile-highlights">
-                      {profile.highlights.map((item) => (
+                      {primaryLeader.highlights.map((item) => (
                         <li key={item}>{item}</li>
                       ))}
                     </ul>
                   ) : null}
+                  {"linkedinUrl" in primaryLeader &&
+                  primaryLeader.linkedinUrl &&
+                  primaryLeader.linkedinLabel ? (
+                    <p>
+                      <a
+                        className="text-link"
+                        href={primaryLeader.linkedinUrl}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        {primaryLeader.linkedinLabel}
+                      </a>
+                    </p>
+                  ) : null}
+                </div>
+              </article>
+            </div>
+          ) : null}
+
+          {supportingLeadership.length ? (
+            <div className="profile-grid profile-grid--leadership">
+              {supportingLeadership.map((profile) => (
+                <article className="card profile-card profile-card--leadership" key={profile.role}>
+                  <p className="eyebrow">{profile.role}</p>
+                  <h3 className="section-title section-title--small">{profile.name}</h3>
+                  <p className="profile-meta">{profile.institution}</p>
+                  <p>{profile.bio}</p>
                   {"linkedinUrl" in profile && profile.linkedinUrl && profile.linkedinLabel ? (
                     <p>
                       <a
@@ -93,10 +122,10 @@ export default function LeadershipTeamPage() {
                       </a>
                     </p>
                   ) : null}
-                </div>
-              </article>
-            ))}
-          </div>
+                </article>
+              ))}
+            </div>
+          ) : null}
         </div>
       </section>
 
@@ -130,7 +159,7 @@ export default function LeadershipTeamPage() {
                 </p>
                 <p>{profile.bio}</p>
                 {"expertise" in profile && profile.expertise ? (
-                  <ul className="editorial-list profile-highlights">
+                  <ul className="expertise-list" aria-label={`${profile.name} areas of expertise`}>
                     {profile.expertise.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
