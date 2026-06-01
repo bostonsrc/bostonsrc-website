@@ -470,6 +470,21 @@ main {
   margin-bottom: 0;
 }
 
+.profile-social-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: color 160ms ease;
+}
+
+.profile-social-link:hover {
+  color: var(--ink);
+}
+
 .profile-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -6,6 +6,24 @@ export const metadata = {
   title: "Leadership & International Advisory Council"
 };
 
+function LinkedInIconLink({ href, label }: { href?: string; label: string }) {
+  if (!href) {
+    return null;
+  }
+
+  return (
+    <a
+      aria-label={label}
+      className="profile-social-link"
+      href={href}
+      rel="noreferrer"
+      target="_blank"
+    >
+      LinkedIn
+    </a>
+  );
+}
+
 export default function LeadershipTeamPage() {
   const [primaryLeader, ...supportingLeadership] = leadershipProfiles;
 
@@ -86,20 +104,10 @@ export default function LeadershipTeamPage() {
                       ))}
                     </ul>
                   ) : null}
-                  {"linkedinUrl" in primaryLeader &&
-                  primaryLeader.linkedinUrl &&
-                  primaryLeader.linkedinLabel ? (
-                    <p>
-                      <a
-                        className="text-link"
-                        href={primaryLeader.linkedinUrl}
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        {primaryLeader.linkedinLabel}
-                      </a>
-                    </p>
-                  ) : null}
+                  <LinkedInIconLink
+                    href={"linkedinUrl" in primaryLeader ? primaryLeader.linkedinUrl : undefined}
+                    label={`${primaryLeader.name} LinkedIn profile`}
+                  />
                 </div>
               </article>
             </div>
@@ -133,18 +141,10 @@ export default function LeadershipTeamPage() {
                       <span className="profile-affiliation">{profile.institution}</span>
                     </p>
                     <p>{profile.bio}</p>
-                    {"linkedinUrl" in profile && profile.linkedinUrl && profile.linkedinLabel ? (
-                      <p>
-                        <a
-                          className="text-link"
-                          href={profile.linkedinUrl}
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          {profile.linkedinLabel}
-                        </a>
-                      </p>
-                    ) : null}
+                    <LinkedInIconLink
+                      href={"linkedinUrl" in profile ? profile.linkedinUrl : undefined}
+                      label={`${profile.name} LinkedIn profile`}
+                    />
                   </div>
                 </article>
               ))}
@@ -181,24 +181,16 @@ export default function LeadershipTeamPage() {
                   <span className="profile-affiliation">{profile.institution}</span>
                 </p>
                 <p>{profile.bio}</p>
+                <LinkedInIconLink
+                  href={"linkedinUrl" in profile ? profile.linkedinUrl : undefined}
+                  label={`${profile.name} LinkedIn profile`}
+                />
                 {"expertise" in profile && profile.expertise ? (
                   <ul className="expertise-list" aria-label={`${profile.name} areas of expertise`}>
                     {profile.expertise.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-                ) : null}
-                {"linkedinUrl" in profile && profile.linkedinUrl ? (
-                  <p>
-                    <a
-                      className="text-link"
-                      href={profile.linkedinUrl}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      {profile.linkedinLabel}
-                    </a>
-                  </p>
                 ) : null}
               </article>
             ))}
