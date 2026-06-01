@@ -207,7 +207,6 @@ export default function LeadershipTeamPage() {
             <div className="section-heading">
               <div>
                 <p className="eyebrow">Strategic Operations & Coordination</p>
-                <h2 className="section-title">Operational leadership support</h2>
               </div>
             </div>
             <div className="profile-feature-list">
