@@ -26,6 +26,7 @@ function LinkedInIconLink({ href, label }: { href?: string; label: string }) {
 
 export default function LeadershipTeamPage() {
   const [primaryLeader, ...supportingLeadership] = leadershipProfiles;
+  const [operationsLead, ...remainingLeadership] = supportingLeadership;
 
   return (
     <>
@@ -115,9 +116,9 @@ export default function LeadershipTeamPage() {
             </div>
           ) : null}
 
-          {supportingLeadership.length ? (
+          {remainingLeadership.length ? (
             <div className="profile-feature-list">
-              {supportingLeadership.map((profile) => (
+              {remainingLeadership.map((profile) => (
                 <article className="profile-feature" key={profile.role}>
                   <div className="profile-feature__media">
                     {profile.image ? (
@@ -199,6 +200,52 @@ export default function LeadershipTeamPage() {
           </div>
         </div>
       </section>
+
+      {operationsLead ? (
+        <section className="section section--bordered">
+          <div className="shell">
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">Strategic Operations & Coordination</p>
+                <h2 className="section-title">Operational leadership support</h2>
+              </div>
+            </div>
+            <div className="profile-feature-list">
+              <article className="profile-feature" key={operationsLead.role}>
+                <div className="profile-feature__media">
+                  {operationsLead.image ? (
+                    <div className="profile-photo-frame">
+                      <Image
+                        alt={operationsLead.name}
+                        className="profile-photo"
+                        fill
+                        sizes="(max-width: 820px) 100vw, 240px"
+                        src={operationsLead.image}
+                      />
+                    </div>
+                  ) : (
+                    <div className="profile-photo-placeholder" aria-hidden="true">
+                      Photo
+                    </div>
+                  )}
+                </div>
+                <div className="profile-feature__content">
+                  <p className="eyebrow">{operationsLead.role}</p>
+                  <h3 className="section-title section-title--small">{operationsLead.name}</h3>
+                  <p className="profile-meta">
+                    <span className="profile-affiliation">{operationsLead.institution}</span>
+                  </p>
+                  <p>{operationsLead.bio}</p>
+                  <LinkedInIconLink
+                    href={"linkedinUrl" in operationsLead ? operationsLead.linkedinUrl : undefined}
+                    label={`${operationsLead.name} LinkedIn profile`}
+                  />
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      ) : null}
     </>
   );
 }

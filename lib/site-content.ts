@@ -122,7 +122,8 @@ export const leadershipProfiles = [
     name: "Aishwarya A. Pashine",
     role: "Strategic Operations & Coordination",
     institution: "Boston Scientific Research Center",
-    bio: "Aishwarya A. Pashine supports strategic operations, coordination, and cross-functional organization across the center's developing activities. Her role is oriented toward helping structure internal workflows, communication continuity, and the practical coordination needed for research, partnership, and program-facing initiatives."
+    image: "/aishwarya-pashine.png",
+    bio: "Aishwarya A. Pashine is an interdisciplinary health science researcher and cardiovascular and pulmonary physiotherapist currently pursuing her PhD in Medical Simulation. She is a co-developer of the PhyCARE international reporting guideline published in BMJ Open and listed on the EQUATOR Network. At BSRC, she supports strategic operations, coordination, and communication continuity across the center's research and partnership activities."
   }
 ];
 
