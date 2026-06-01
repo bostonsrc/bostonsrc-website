@@ -130,6 +130,23 @@ export const leadershipProfiles = [
 
 export const advisoryProfiles = [
   {
+    name: "Leah Fabiano",
+    title: "Professor and PhD Program Director, Department of Communication Science and Disorders",
+    institution: "University of Pittsburgh, School of Health and Rehabilitation Sciences",
+    country: "USA",
+    image: "/leah-fabiano.jpg",
+    bio: "Dr. Leah Fabiano is a Professor and PhD Program Director in the Department of Communication Science and Disorders at the University of Pittsburgh and a Fellow of the American Speech-Language-Hearing Association. She holds a PhD from Temple University and completed postdoctoral training at the University of California San Diego. Her research focuses on bilingual phonological acquisition, the assessment and diagnosis of speech sound disorders in multilingual children, and equitable service delivery for culturally and linguistically diverse populations. She has secured more than six million dollars in NIH funding as principal investigator and serves as Editor of the Speech Division of the Journal of Speech, Language, and Hearing Research.",
+    expertise: [
+      "Bilingual phonological acquisition",
+      "Speech sound disorders",
+      "Multilingual assessment",
+      "Health disparities",
+      "Communication sciences"
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/leah-fabiano-0a7995b/?skipRedirect=true"
+  },
+  {
     name: "Joshua Zadro",
     title: "Associate Professor",
     institution: "The University of Sydney",
