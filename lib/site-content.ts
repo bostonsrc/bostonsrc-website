@@ -196,6 +196,23 @@ export const advisoryProfiles = [
     ],
     linkedinLabel: "LinkedIn profile",
     linkedinUrl: "https://www.linkedin.com/in/dr-shahnawaz-anwer-phd-84593933/"
+  },
+  {
+    name: "Panayiota Senekkis-Florent",
+    title: "Assistant Professor and Program Director, DU-PHAGIA Pediatric Specialty Clinic, Department of Speech-Language Pathology",
+    institution: "John G. Rangos School of Health Sciences, Duquesne University",
+    country: "USA",
+    image: "/panayiota-senekkis-florent.jpg",
+    bio: "Dr. Panayiota Senekkis-Florent is an Assistant Professor at Duquesne University and a Board Certified Specialist in Swallowing and Swallowing Disorders with a subspecialty in pediatrics. She holds a PhD from Trinity College Dublin and previously served as Lead Speech-Language Pathologist and Director at Johns Hopkins School of Medicine. Her clinical and research expertise spans pediatric dysphagia, neonatal feeding, and global health in communication sciences. She is a Board Certified Neonatal Therapist and an Adjunct Professor at Trinity College Dublin. Her work bridges clinical excellence, interdisciplinary education, and internationally engaged scholarship across Europe, North America, and Africa.",
+    expertise: [
+      "Pediatric dysphagia",
+      "Neonatal feeding",
+      "Global health",
+      "Clinical speech-language pathology",
+      "Interdisciplinary rehabilitation"
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/p-senekkis/"
   }
 ];
 
