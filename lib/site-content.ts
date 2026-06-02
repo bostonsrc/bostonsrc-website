@@ -217,7 +217,7 @@ export const advisoryProfiles = [
   {
     name: "Pablo Herrero Gallego",
     title: "Professor and Researcher",
-    institution: "University of Zaragoza",
+    institution: "Aragon Health Research Institute (IIS Aragon), University of Zaragoza",
     country: "Spain",
     image: "/pablo-herrero-gallego.jpg",
     imageFit: "contain",
