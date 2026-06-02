@@ -25,7 +25,8 @@ function LinkedInIconLink({ href, label }: { href?: string; label: string }) {
 }
 
 function getProfileImageStyle(profile: {
-  imageFit?: "contain" | "cover";
+  [key: string]: unknown;
+  imageFit?: string;
   imagePosition?: string;
 }) {
   if (!profile.imageFit && !profile.imagePosition) {
@@ -34,7 +35,7 @@ function getProfileImageStyle(profile: {
 
   return {
     backgroundColor: "#fff",
-    objectFit: profile.imageFit ?? "cover",
+    objectFit: profile.imageFit === "contain" ? "contain" : "cover",
     objectPosition: profile.imagePosition ?? "center top"
   } as const;
 }
