@@ -131,7 +131,7 @@ export const leadershipProfiles = [
 export const advisoryProfiles = [
   {
     name: "Leah Fabiano",
-    title: "Professor and PhD Program Director, Department of Communication Science and Disorders",
+    title: "Professor and PhD Program Director",
     institution: "University of Pittsburgh, School of Health and Rehabilitation Sciences",
     country: "USA",
     image: "/leah-fabiano.jpg",
@@ -165,7 +165,7 @@ export const advisoryProfiles = [
   },
   {
     name: "Mehrunishah Begum",
-    title: "Senior Lecturer and Program Director, Postgraduate Business Administration in Healthcare Management",
+    title: "Senior Lecturer and Program Director",
     institution: "IMU University, School of Business and Technology",
     country: "Malaysia",
     image: "/mehrunishah-begum.jpeg",
@@ -182,7 +182,7 @@ export const advisoryProfiles = [
   },
   {
     name: "Shahnawaz Anwer",
-    title: "Research Assistant Professor (Sports Science and Musculoskeletal Health)",
+    title: "Research Assistant Professor",
     institution: "The Hong Kong Polytechnic University",
     country: "Hong Kong",
     image: "/shahnawaz-anwer.jpg",
@@ -199,7 +199,7 @@ export const advisoryProfiles = [
   },
   {
     name: "Panayiota Senekkis-Florent",
-    title: "Assistant Professor and Program Director, DU-PHAGIA Pediatric Specialty Clinic, Department of Speech-Language Pathology",
+    title: "Assistant Professor and Program Director",
     institution: "John G. Rangos School of Health Sciences, Duquesne University",
     country: "USA",
     image: "/panayiota-senekkis-florent.jpg",
