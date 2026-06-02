@@ -24,6 +24,21 @@ function LinkedInIconLink({ href, label }: { href?: string; label: string }) {
   );
 }
 
+function getProfileImageStyle(profile: {
+  imageFit?: "contain" | "cover";
+  imagePosition?: string;
+}) {
+  if (!profile.imageFit && !profile.imagePosition) {
+    return undefined;
+  }
+
+  return {
+    backgroundColor: "#fff",
+    objectFit: profile.imageFit ?? "cover",
+    objectPosition: profile.imagePosition ?? "center top"
+  } as const;
+}
+
 export default function LeadershipTeamPage() {
   const [primaryLeader, ...supportingLeadership] = leadershipProfiles;
   const [operationsLead, ...remainingLeadership] = supportingLeadership;
@@ -81,6 +96,7 @@ export default function LeadershipTeamPage() {
                           fill
                           sizes="(max-width: 820px) 100vw, 240px"
                           src={primaryLeader.image}
+                          style={getProfileImageStyle(primaryLeader)}
                         />
                       </div>
                       <LinkedInIconLink
@@ -129,6 +145,7 @@ export default function LeadershipTeamPage() {
                           fill
                           sizes="(max-width: 820px) 100vw, 240px"
                           src={profile.image}
+                          style={getProfileImageStyle(profile)}
                         />
                       </div>
                     ) : (
@@ -174,6 +191,7 @@ export default function LeadershipTeamPage() {
                       fill
                       sizes="(max-width: 820px) 100vw, 320px"
                       src={profile.image}
+                      style={getProfileImageStyle(profile)}
                     />
                   </div>
                 ) : null}
@@ -220,6 +238,7 @@ export default function LeadershipTeamPage() {
                         fill
                         sizes="(max-width: 820px) 100vw, 240px"
                         src={operationsLead.image}
+                        style={getProfileImageStyle(operationsLead)}
                       />
                     </div>
                   ) : (

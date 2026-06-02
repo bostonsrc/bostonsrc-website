@@ -213,6 +213,25 @@ export const advisoryProfiles = [
     ],
     linkedinLabel: "LinkedIn profile",
     linkedinUrl: "https://www.linkedin.com/in/p-senekkis/"
+  },
+  {
+    name: "Pablo Herrero Gallego",
+    title: "Professor and Researcher",
+    institution: "University of Zaragoza",
+    country: "Spain",
+    image: "/pablo-herrero-gallego.jpg",
+    imageFit: "contain",
+    imagePosition: "center center",
+    bio: "Dr. Pablo Herrero Gallego, PT, PhD, is a Professor and Researcher at the University of Zaragoza, where he leads the iHealthy Research Group. He holds a PhD in Physiotherapy and specializes in invasive physiotherapy and myofascial pain. He serves as Editor-in-Chief of Invasive Physiotherapy and Musculoskeletal Medicine and Vice President of SOCIFIN. His research has produced more than 100 publications in JCR-indexed journals and has been translated into internationally disseminated clinical tools, including the DNHS technique, the patented 3TOOL device, and the HEFORA telerehabilitation platform. He also led STROKE-POC, the first European clinical trial comparing dry needling and botulinum toxin for post-stroke spasticity.",
+    expertise: [
+      "Invasive physiotherapy",
+      "Dry needling",
+      "Myofascial pain",
+      "Musculoskeletal rehabilitation",
+      "Clinical research and technology transfer"
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/pablo-herrero-gallego-22793238/"
   }
 ];
 
