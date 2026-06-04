@@ -232,6 +232,40 @@ export const advisoryProfiles = [
     ],
     linkedinLabel: "LinkedIn profile",
     linkedinUrl: "https://www.linkedin.com/in/pablo-herrero-gallego-22793238/"
+  },
+  {
+    name: "Eleuterio A. Sánchez-Romero",
+    title: "Associate Professor",
+    institution: "Nebrija University and Alfonso X el Sabio University, Madrid; Florida Gulf Coast University",
+    country: "Spain / USA",
+    image: "/eleuterio-sanchez-romero.jpg",
+    bio: "Dr. Eleuterio A. Sánchez-Romero is a physiotherapist and ANECA-accredited Associate Professor with more than 15 years of academic, research, and clinical experience across Spain and the United States. He holds an international PhD in Health Sciences and has been awarded a nationally recognised six-year research evaluation period for research excellence in Spain. He is affiliated with Florida Gulf Coast University as an international academic collaborator and is a member of the Research Group in Nursing and Health Care at the Puerta de Hierro Health Research Institute in Madrid. He leads two research groups focused on musculoskeletal disorders and orofacial pain, and has authored more than 100 peer-reviewed publications spanning orthopedic manual therapy, evidence-based rehabilitation, musculoskeletal ultrasound imaging, clinical epidemiology, and healthy aging.",
+    expertise: [
+      "Musculoskeletal disorders",
+      "Orthopedic manual therapy",
+      "Orofacial pain and temporomandibular disorders",
+      "Evidence-based rehabilitation",
+      "Research methodology"
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/eleuterio-a-s%C3%A1nchez-romero-96927645/"
+  },
+  {
+    name: "Michael Rowe",
+    title: "Director of Teaching and Learning",
+    institution: "University of Lincoln, School of Health and Care Sciences",
+    country: "United Kingdom",
+    image: "/michael-rowe.png",
+    bio: "Dr. Michael Rowe is Director of Teaching and Learning at the University of Lincoln and a Senior Fellow of Advance HE. With more than 15 years of experience across health professions education, digital innovation, and academic leadership, his work focuses on the responsible integration of artificial intelligence into healthcare education and clinical practice. He advises the Health and Care Professions Council, the Council of Deans of Health, and the Chartered Society of Physiotherapy on AI in education. He co-led an international IFOMPT project on AI in physiotherapy and has contributed as invited faculty across a seven-institution European consortium on AI and digital health in physiotherapy education.",
+    expertise: [
+      "AI in health professions education",
+      "Digital innovation",
+      "Simulation and virtual reality",
+      "Curriculum transformation",
+      "AI governance and ethics"
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/michael-rowe-phd/"
   }
 ];
 
