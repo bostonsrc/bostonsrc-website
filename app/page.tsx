@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { collaborationPoints, homeHighlights, philosophyPoints } from "@/lib/site-content";
+
+export const metadata: Metadata = {
+  description:
+    "Boston Scientific Research Center is a US-based research center building research capacity, faculty development, and scholarly excellence for institutions worldwide."
+};
 
 export default function HomePage() {
   return (
@@ -10,18 +16,20 @@ export default function HomePage() {
           <div className="hero__content">
             <p className="eyebrow">Boston Scientific Research Center</p>
             <h1 className="display-title">
-              Advancing scientific inquiry, interdisciplinary scholarship, and evidence-driven
-              innovation through globally connected research ecosystems.
+              Building research capacity and scholarly excellence for institutions worldwide.
             </h1>
             <p className="lead">
               Boston Scientific Research Center is a United States-based academic and scientific
-              center devoted to research development, interdisciplinary scholarship, and
-              internationally engaged knowledge production across science, education, and evidence
-              studies.
+              center that partners with universities, healthcare institutions, and academic
+              organizations to strengthen research capacity, develop faculty, and advance scholarly
+              culture across disciplines and borders.
             </p>
             <div className="hero__actions">
               <Link className="button" href="/about">
                 Explore the center
+              </Link>
+              <Link className="button button--secondary" href="/services">
+                What We Do
               </Link>
               <Link className="button button--secondary" href="/contact">
                 Contact BSR
@@ -71,9 +79,8 @@ export default function HomePage() {
           <div className="prose">
             <p>
               BSR is designed to serve as a modern research center with a restrained,
-              internationally legible identity. Its focus is not promotional spectacle, but the
-              disciplined cultivation of scientific quality, thoughtful collaboration, and
-              future-aware scholarly systems.
+              internationally legible identity. Its work centers on the disciplined cultivation of
+              scientific quality, thoughtful collaboration, and future-aware scholarly systems.
             </p>
             <p>
               The center brings together research development, editorial discipline, and

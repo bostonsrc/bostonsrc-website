@@ -21,30 +21,33 @@ export const navigation = [
 
 export const homeHighlights = [
   {
-    title: "Evidence Synthesis & Scholarly Rigor",
-    text: "We support methodologically grounded inquiry through synthesis, appraisal, and transparent knowledge development across health and interdisciplinary domains."
+    title: "Research Development and Consulting",
+    text: "BSRC works with institutions to strengthen research infrastructure, raise scholarly output, and build the systems that support sustained academic growth.",
+    href: "/services"
   },
   {
-    title: "AI-enabled Research Support",
-    text: "We integrate carefully governed digital workflows to strengthen research operations, accelerate review cycles, and preserve academic quality."
+    title: "Faculty Development Programs",
+    text: "BSRC supports the academic and scholarly development of faculty, clinicians, and postgraduate researchers through structured programs informed by international expertise.",
+    href: "/services"
   },
   {
-    title: "International Collaboration Models",
-    text: "We build globally oriented partnerships that connect investigators, educators, and institutions through shared scientific objectives."
+    title: "Methodology and Reporting Standards",
+    text: "BSRC provides methodology guidance, reporting-standard training, and evidence-synthesis support grounded in internationally recognized reporting guidelines.",
+    href: "/services"
   }
 ];
 
 export const philosophyPoints = [
   "Scientific inquiry must remain principled, transparent, and accountable to evidence.",
   "Interdisciplinary scholarship should connect method, education, and real-world application.",
-  "Technology should extend scholarly judgement rather than displace it."
+  "Technology should extend scholarly judgment rather than displace it."
 ];
 
 export const collaborationPoints = [
   "Cross-border research relationships",
-  "Editorial and methodological collaboration",
+  "Methodological collaboration and evidence synthesis",
   "Health professions education partnerships",
-  "Center capacity-building initiatives"
+  "Faculty and institutional research development"
 ];
 
 export const researchAreas = [
@@ -157,7 +160,7 @@ export const advisoryProfiles = [
       "Musculoskeletal pain",
       "Digital health",
       "Clinical trials",
-      "Orthopaedics",
+      "Orthopedics",
       "Health services research"
     ],
     linkedinLabel: "LinkedIn profile",
@@ -169,12 +172,12 @@ export const advisoryProfiles = [
     institution: "IMU University, School of Business and Technology",
     country: "Malaysia",
     image: "/mehrunishah-begum.jpeg",
-    bio: "Dr. Mehrunishah Begum is a Senior Lecturer and Program Director at IMU University, Malaysia, with more than two decades of experience spanning academia, research, and consultancy. She holds a PhD in Management and has supervised 10 PhD candidates to completion. Her work covers entrepreneurship, human resource management, sustainable leadership, and organisational behaviour. She has contributed to policy-level research as a national researcher for the Human Resource Development Corporation of Malaysia, with work touching social security, labour markets, and Industry 4.0, and she also serves as a PhD and DBA examiner across universities in Malaysia, India, Pakistan, Bangladesh, and the UAE.",
+    bio: "Dr. Mehrunishah Begum is a Senior Lecturer and Program Director at IMU University, Malaysia, with more than two decades of experience spanning academia, research, and consultancy. She holds a PhD in Management and has supervised 10 PhD candidates to completion. Her work covers entrepreneurship, human resource management, sustainable leadership, and organizational behavior. She has contributed to policy-level research as a national researcher for the Human Resource Development Corporation of Malaysia, with work touching social security, labor markets, and Industry 4.0, and she also serves as a PhD and DBA examiner across universities in Malaysia, India, Pakistan, Bangladesh, and the UAE.",
     expertise: [
       "Entrepreneurship",
       "Human resource management",
       "Sustainable leadership",
-      "Organisational behaviour",
+      "Organizational behavior",
       "International business"
     ],
     linkedinLabel: "LinkedIn profile",
@@ -186,7 +189,7 @@ export const advisoryProfiles = [
     institution: "The Hong Kong Polytechnic University",
     country: "Hong Kong",
     image: "/shahnawaz-anwer.jpg",
-    bio: "Dr. Shahnawaz Anwer is a Research Assistant Professor in the Department of Rehabilitation Sciences at The Hong Kong Polytechnic University and PEDro Representative for Asia East (Hong Kong). Recognised as a Stanford University World Top 2% Researcher in Rehabilitation for three consecutive years, he holds a PhD from The Hong Kong Polytechnic University and has published more than 135 peer-reviewed articles with an h-index of 40 and over 5,000 citations. His work spans ergonomics, wearable sensor technology, occupational health, work-related musculoskeletal disorders, and rehabilitation, and he also contributes as a senior collaborator to the Global Burden of Disease study at the University of Washington.",
+    bio: "Dr. Shahnawaz Anwer is a Research Assistant Professor in the Department of Rehabilitation Sciences at The Hong Kong Polytechnic University and PEDro Representative for Asia East (Hong Kong). Recognized as a Stanford University World Top 2% Researcher in Rehabilitation for three consecutive years, he holds a PhD from The Hong Kong Polytechnic University and has published more than 135 peer-reviewed articles with an h-index of 40 and over 5,000 citations. His work spans ergonomics, wearable sensor technology, occupational health, work-related musculoskeletal disorders, and rehabilitation, and he also contributes as a senior collaborator to the Global Burden of Disease study at the University of Washington.",
     expertise: [
       "Ergonomics",
       "Musculoskeletal disorders",
@@ -239,7 +242,7 @@ export const advisoryProfiles = [
     institution: "Nebrija University and Alfonso X el Sabio University, Madrid; Florida Gulf Coast University",
     country: "Spain / USA",
     image: "/eleuterio-sanchez-romero.jpg",
-    bio: "Dr. Eleuterio A. Sánchez-Romero is a physiotherapist and ANECA-accredited Associate Professor with more than 15 years of academic, research, and clinical experience across Spain and the United States. He holds an international PhD in Health Sciences and has been awarded a nationally recognised six-year research evaluation period for research excellence in Spain. He is affiliated with Florida Gulf Coast University as an international academic collaborator and is a member of the Research Group in Nursing and Health Care at the Puerta de Hierro Health Research Institute in Madrid. He leads two research groups focused on musculoskeletal disorders and orofacial pain, and has authored more than 100 peer-reviewed publications spanning orthopedic manual therapy, evidence-based rehabilitation, musculoskeletal ultrasound imaging, clinical epidemiology, and healthy aging.",
+    bio: "Dr. Eleuterio A. Sánchez-Romero is a physiotherapist and ANECA-accredited Associate Professor with more than 15 years of academic, research, and clinical experience across Spain and the United States. He holds an international PhD in Health Sciences and has been awarded a nationally recognized six-year research evaluation period for research excellence in Spain. He is affiliated with Florida Gulf Coast University as an international academic collaborator and is a member of the Research Group in Nursing and Health Care at the Puerta de Hierro Health Research Institute in Madrid. He leads two research groups focused on musculoskeletal disorders and orofacial pain, and has authored more than 100 peer-reviewed publications spanning orthopedic manual therapy, evidence-based rehabilitation, musculoskeletal ultrasound imaging, clinical epidemiology, and healthy aging.",
     expertise: [
       "Musculoskeletal disorders",
       "Orthopedic manual therapy",

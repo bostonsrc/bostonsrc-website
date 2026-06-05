@@ -1,9 +1,12 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { advisoryProfiles, leadershipProfiles } from "@/lib/site-content";
 
-export const metadata = {
-  title: "Leadership & International Advisory Council"
+export const metadata: Metadata = {
+  title: "Leadership & International Advisory Council",
+  description:
+    "Meet the leadership and International Advisory Council of Boston Scientific Research Center, distinguished scholars across international academic and healthcare settings."
 };
 
 function LinkedInIconLink({ href, label }: { href?: string; label: string }) {

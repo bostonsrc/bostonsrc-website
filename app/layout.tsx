@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Boston Scientific Research Center"
   },
   description:
-    "Boston Scientific Research Center is a United States-based scientific and academic center focused on evidence-driven inquiry, interdisciplinary scholarship, and globally connected collaboration.",
+    "Boston Scientific Research Center is a US-based research center building research capacity, faculty development, and scholarly excellence for institutions worldwide.",
   icons: {
     icon: [{ url: "/favicon.png", type: "image/png" }],
     apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }]

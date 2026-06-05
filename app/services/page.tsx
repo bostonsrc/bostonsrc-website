@@ -1,8 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { institution } from "@/lib/site-content";
 
-export const metadata = {
-  title: "What We Do"
+export const metadata: Metadata = {
+  title: "What We Do",
+  description:
+    "Boston Scientific Research Center offers research development consulting, faculty development programs, and methodology training for universities, healthcare institutions, and academic organizations."
 };
 
 const primaryServices = [
@@ -105,7 +108,7 @@ export default function ServicesPage() {
           <div className="section-heading">
             <div>
               <p className="eyebrow">Further Areas of Engagement</p>
-              <h2 className="section-title">Additional scholarly and academic support.</h2>
+              <h2 className="section-title">Additional areas we support.</h2>
             </div>
           </div>
           <div className="supporting-services-grid">

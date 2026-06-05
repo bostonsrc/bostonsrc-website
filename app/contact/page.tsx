@@ -1,8 +1,11 @@
+import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { institution } from "@/lib/site-content";
 
-export const metadata = {
-  title: "Contact"
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Contact Boston Scientific Research Center for research collaboration, institutional partnership, or academic engagement."
 };
 
 export default function ContactPage() {
@@ -10,19 +13,13 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Professional contact for center inquiries, collaboration, and scholarly engagement."
-        intro="For collaboration, academic engagement, or scholarly partnership, please contact BSR directly by email or connect with the center on LinkedIn."
+        title="Get in Touch"
+        intro="For research collaboration, academic engagement, or institutional partnership, reach us directly by email or connect with us on LinkedIn."
       />
 
       <section className="section">
         <div className="shell contact-single">
           <div className="contact-panel">
-            <p className="eyebrow">Inquiries</p>
-            <h2 className="section-title">Contact center</h2>
-            <p className="statement-text statement-text--smaller">
-              For inquiries, please feel free to email the center directly or connect
-              with Boston Scientific Research Center on LinkedIn.
-            </p>
             <div className="contact-actions">
               <a className="button button--primary" href={`mailto:${institution.email}`}>
                 Email BSR

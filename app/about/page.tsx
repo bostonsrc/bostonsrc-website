@@ -1,7 +1,11 @@
+import Link from "next/link";
+import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 
-export const metadata = {
-  title: "About"
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn about Boston Scientific Research Center, its research philosophy, global outlook, and commitment to evidence-driven interdisciplinary scholarship."
 };
 
 export default function AboutPage() {
@@ -47,9 +51,9 @@ export default function AboutPage() {
               proportionate in its claims.
             </p>
             <p>
-              This philosophy informs our work in evidence synthesis, scientific communication,
-              educational development, and carefully governed digital scholarship. Digital
-              acceleration is useful only when it preserves academic judgement and strengthens the integrity of
+              This philosophy informs our work in evidence synthesis, research development,
+              educational advancement, and carefully governed digital scholarship. Digital
+              acceleration is useful only when it preserves academic judgment and strengthens the integrity of
               outcomes.
             </p>
           </div>
@@ -64,14 +68,14 @@ export default function AboutPage() {
           </div>
           <div className="prose">
             <p>
-              BSR is built with a global outlook, recognising that significant scholarship often
+              BSR is built with a global outlook, recognizing that significant scholarship often
               emerges from distributed expertise, cross-border exchange, and coherent
               center-led collaboration.
             </p>
             <p>
-              Our public language, organisational structure, and research posture are
+              Our public language, organizational structure, and research posture are
               intentionally designed to be legible across international academic settings while
-              remaining grounded in a disciplined United States-based legal and organisational
+              remaining grounded in a disciplined United States-based legal and organizational
               framework.
             </p>
           </div>
@@ -83,7 +87,7 @@ export default function AboutPage() {
           <article className="card">
             <h3>Commitment to Scientific Integrity</h3>
             <p>
-              We prioritise methodological accountability, ethical scholarly conduct, and
+              We prioritize methodological accountability, ethical scholarly conduct, and
               proportionate scientific communication in every center engagement.
             </p>
           </article>
@@ -97,10 +101,28 @@ export default function AboutPage() {
           <article className="card">
             <h3>Editorial Culture</h3>
             <p>
-              BSR values thoughtful language, measured presentation, and organisational coherence as
+              BSR values thoughtful language, measured presentation, and organizational coherence as
               part of scientific credibility rather than decoration around it.
             </p>
           </article>
+        </div>
+      </section>
+
+      <section className="section section--bordered">
+        <div className="shell cta-block">
+          <div>
+            <p className="eyebrow">Learn More</p>
+            <h2 className="section-title">Learn more about our work</h2>
+            <p className="lead lead--compact">
+              To explore how BSRC partners with institutions and research teams, visit our What We
+              Do page.
+            </p>
+          </div>
+          <div className="cta-block__actions">
+            <Link className="button" href="/services">
+              What We Do
+            </Link>
+          </div>
         </div>
       </section>
     </>
