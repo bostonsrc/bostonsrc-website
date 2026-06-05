@@ -1,8 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Wordmark } from "@/components/wordmark";
 import { institution, navigation } from "@/lib/site-content";
 
 export function SiteFooter() {
+  const pathname = usePathname();
+  const showContactDetails = pathname !== "/contact";
+
   return (
     <footer className="site-footer">
       <div className="shell site-footer__grid">
@@ -26,20 +32,22 @@ export function SiteFooter() {
             {institution.country}
           </p>
         </div>
-        <div>
-          <p className="footer-heading">Contact</p>
-          <p className="footer-copy">
-            <a href={`mailto:${institution.email}`}>{institution.email}</a>
-            <br />
-            <a href={institution.website} target="_blank" rel="noreferrer">
-              www.bostonsrc.org
-            </a>
-            <br />
-            <a href={institution.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn: Boston Scientific Research Center
-            </a>
-          </p>
-        </div>
+        {showContactDetails ? (
+          <div>
+            <p className="footer-heading">Contact</p>
+            <p className="footer-copy">
+              <a href={`mailto:${institution.email}`}>{institution.email}</a>
+              <br />
+              <a href={institution.website} target="_blank" rel="noreferrer">
+                www.bostonsrc.org
+              </a>
+              <br />
+              <a href={institution.linkedin} target="_blank" rel="noreferrer">
+                LinkedIn: Boston Scientific Research Center
+              </a>
+            </p>
+          </div>
+        ) : null}
         <div>
           <p className="footer-heading">Navigate</p>
           <div className="footer-links">
