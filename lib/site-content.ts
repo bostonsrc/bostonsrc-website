@@ -15,7 +15,7 @@ export const navigation = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/leadership-team", label: "Leadership & Council" },
-  { href: "/services", label: "Center Areas" },
+  { href: "/services", label: "What We Do" },
   { href: "/contact", label: "Contact" }
 ];
 

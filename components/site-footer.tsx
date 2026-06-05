@@ -36,14 +36,17 @@ export function SiteFooter() {
           <div>
             <p className="footer-heading">Contact</p>
             <p className="footer-copy">
-              <a href={`mailto:${institution.email}`}>{institution.email}</a>
+              <a className="contact-link" href={`mailto:${institution.email}`}>
+                {institution.email}
+              </a>
               <br />
-              <a href={institution.website} target="_blank" rel="noreferrer">
+              <a className="contact-link" href={institution.website} target="_blank" rel="noreferrer">
                 www.bostonsrc.org
               </a>
               <br />
-              <a href={institution.linkedin} target="_blank" rel="noreferrer">
-                LinkedIn: Boston Scientific Research Center
+              <span>LinkedIn: </span>
+              <a className="contact-link" href={institution.linkedin} target="_blank" rel="noreferrer">
+                Boston Scientific Research Center
               </a>
             </p>
           </div>

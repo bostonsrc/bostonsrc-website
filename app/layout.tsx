@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   },
   description:
     "Boston Scientific Research Center is a United States-based scientific and academic center focused on evidence-driven inquiry, interdisciplinary scholarship, and globally connected collaboration.",
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }]
+  },
   openGraph: {
     title: "Boston Scientific Research Center",
     description:
