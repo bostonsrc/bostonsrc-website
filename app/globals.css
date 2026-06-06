@@ -576,6 +576,11 @@ main {
   font-size: 1.38rem;
 }
 
+.card h3 + p,
+.research-card h3 + p {
+  margin-top: 0.95rem;
+}
+
 .board-card__name {
   font-size: 1.55rem;
 }
