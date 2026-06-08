@@ -126,7 +126,7 @@ export const leadershipProfiles = [
     role: "Strategic Operations & Coordination",
     institution: "Boston Scientific Research Center",
     image: "/aishwarya-pashine.png",
-    bio: "Aishwarya A. Pashine is an interdisciplinary health science researcher and cardiovascular and pulmonary physiotherapist currently pursuing her PhD in Medical Simulation. She is a co-developer of the PhyCARE international reporting guideline published in BMJ Open and listed on the EQUATOR Network. At BSRC, she supports strategic operations, coordination, and communication continuity across the center's research and partnership activities.",
+    bio: "Aishwarya A. Pashine is an interdisciplinary health science researcher and cardiovascular and pulmonary physiotherapist. She is a co-developer of the PhyCARE international reporting guideline published in BMJ Open and listed on the EQUATOR Network. At BSRC, she supports strategic operations, coordination, and communication continuity across the center's research and partnership activities.",
     linkedinUrl: "https://www.linkedin.com/in/aishwarya-a-pashine-2b29b9246/"
   }
 ];
@@ -148,6 +148,23 @@ export const advisoryProfiles = [
     ],
     linkedinLabel: "LinkedIn profile",
     linkedinUrl: "https://www.linkedin.com/in/leah-fabiano-0a7995b/?skipRedirect=true"
+  },
+  {
+    name: "Rohini Ganjoo",
+    title: "Associate Professor and Director",
+    institution: "The George Washington University, School of Medicine and Health Sciences",
+    country: "USA",
+    image: "/rohini-ganjoo.jpg",
+    bio: "Dr. Rohini Ganjoo is an Associate Professor and Director of the MSHS in Biomedical Laboratory Sciences at The George Washington University School of Medicine and Health Sciences, and an Adjunct Associate Professor at Johns Hopkins Bloomberg School of Public Health. She holds a PhD in Molecular Biology and Immunology from the University of North Texas Health Science Center. Her work spans health professions education, evidence synthesis, biomedical laboratory sciences, and faculty development. She serves as a mentor in the FAIMER fellowship program and is a recipient of multiple distinguished teaching awards, including the Morton A. Bender Teaching Award and the GW Academic Medical Enterprise Pillar of Excellence Award. She directs an educational assistance program supporting more than 200 college-bound students from refugee camps in India annually.",
+    expertise: [
+      "Health professions education",
+      "Biomedical laboratory sciences",
+      "Faculty development",
+      "Evidence synthesis",
+      "Health equity"
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/rohiniganjoo/"
   },
   {
     name: "Joshua Zadro",
