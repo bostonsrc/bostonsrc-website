@@ -184,6 +184,23 @@ export const advisoryProfiles = [
     linkedinUrl: "https://www.linkedin.com/in/joshua-zadro-b12533159/"
   },
   {
+    name: "Michael Rowe",
+    title: "Director of Teaching and Learning",
+    institution: "University of Lincoln, School of Health and Care Sciences",
+    country: "United Kingdom",
+    image: "/michael-rowe.png",
+    bio: "Dr. Michael Rowe is Director of Teaching and Learning at the University of Lincoln and a Senior Fellow of Advance HE. With more than 15 years of experience across health professions education, digital innovation, and academic leadership, his work focuses on the responsible integration of artificial intelligence into healthcare education and clinical practice. He advises the Health and Care Professions Council, the Council of Deans of Health, and the Chartered Society of Physiotherapy on AI in education. He co-led an international IFOMPT project on AI in physiotherapy and has contributed as invited faculty across a seven-institution European consortium on AI and digital health in physiotherapy education.",
+    expertise: [
+      "AI in health professions education",
+      "Digital innovation",
+      "Simulation and virtual reality",
+      "Curriculum transformation",
+      "AI governance and ethics"
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/michael-rowe-phd/"
+  },
+  {
     name: "Mehrunishah Begum",
     title: "Senior Lecturer and Program Director",
     institution: "IMU University, School of Business and Technology",
@@ -269,23 +286,6 @@ export const advisoryProfiles = [
     ],
     linkedinLabel: "LinkedIn profile",
     linkedinUrl: "https://www.linkedin.com/in/eleuterio-a-s%C3%A1nchez-romero-96927645/"
-  },
-  {
-    name: "Michael Rowe",
-    title: "Director of Teaching and Learning",
-    institution: "University of Lincoln, School of Health and Care Sciences",
-    country: "United Kingdom",
-    image: "/michael-rowe.png",
-    bio: "Dr. Michael Rowe is Director of Teaching and Learning at the University of Lincoln and a Senior Fellow of Advance HE. With more than 15 years of experience across health professions education, digital innovation, and academic leadership, his work focuses on the responsible integration of artificial intelligence into healthcare education and clinical practice. He advises the Health and Care Professions Council, the Council of Deans of Health, and the Chartered Society of Physiotherapy on AI in education. He co-led an international IFOMPT project on AI in physiotherapy and has contributed as invited faculty across a seven-institution European consortium on AI and digital health in physiotherapy education.",
-    expertise: [
-      "AI in health professions education",
-      "Digital innovation",
-      "Simulation and virtual reality",
-      "Curriculum transformation",
-      "AI governance and ethics"
-    ],
-    linkedinLabel: "LinkedIn profile",
-    linkedinUrl: "https://www.linkedin.com/in/michael-rowe-phd/"
   }
 ];
 
