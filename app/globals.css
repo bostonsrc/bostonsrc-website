@@ -520,6 +520,113 @@ main {
   line-height: 1.25;
 }
 
+.resource-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.resource-card {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(122, 31, 43, 0.06), rgba(13, 27, 42, 0.02)),
+    var(--surface);
+}
+
+.resource-card p {
+  max-width: 48rem;
+  margin: 0;
+  color: var(--muted);
+}
+
+.resource-brand-logo {
+  display: block;
+  width: min(100%, 22rem);
+  height: auto;
+}
+
+.resource-brand-logo--hero {
+  width: min(100%, 30rem);
+  margin: 0.8rem 0 1rem;
+}
+
+.resource-card__subtitle {
+  color: var(--ink) !important;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.resource-card .button {
+  width: fit-content;
+  margin-top: 0.5rem;
+}
+
+.resource-tool-hero__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  align-items: flex-end;
+}
+
+.resource-tool-hero__actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.resource-tool-hero__actions .button {
+  justify-content: center;
+}
+
+.resource-app-section {
+  padding-top: 2rem;
+}
+
+.resource-embed-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.resource-embed-card--app {
+  border-radius: 2rem;
+  background:
+    linear-gradient(135deg, rgba(248, 90, 98, 0.1), rgba(47, 142, 243, 0.09)),
+    #ffffff;
+  box-shadow: 0 2rem 5rem rgba(13, 27, 42, 0.16);
+  padding: 0.7rem;
+}
+
+.resource-app-chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0.8rem 0.9rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.resource-app-chrome img {
+  width: 9.5rem;
+  height: auto;
+}
+
+.resource-embed {
+  width: 100%;
+  height: min(82vh, 58rem);
+  min-height: 42rem;
+  border: 0;
+  border-radius: 1.35rem;
+  background: #fff;
+}
+
 .services-cta p {
   max-width: 46rem;
   color: var(--muted);
@@ -1028,14 +1135,24 @@ main {
 
   .cta-block,
   .services-hero__inner,
+  .resource-tool-hero__inner,
   .section-heading {
     flex-direction: column;
   }
 
   .cta-block,
   .services-hero__inner,
+  .resource-tool-hero__inner,
   .section-heading {
     align-items: start;
+  }
+
+  .resource-tool-hero__actions {
+    width: 100%;
+  }
+
+  .resource-embed {
+    min-height: 76vh;
   }
 
   .hero__grid--editorial {
@@ -1044,9 +1161,114 @@ main {
   }
 }
 
+@media (max-width: 720px) {
+  body:has(.bloomrang-app-page) {
+    background: #fff8fb;
+  }
+
+  body:has(.bloomrang-app-page) .site-footer {
+    display: none;
+  }
+
+  .bloomrang-app-page .resource-tool-hero {
+    padding: 1rem 0 0.8rem;
+    background:
+      radial-gradient(circle at 10% 0%, rgba(248, 90, 98, 0.12), transparent 30%),
+      radial-gradient(circle at 90% 10%, rgba(32, 180, 155, 0.12), transparent 28%),
+      #fff8fb;
+  }
+
+  .bloomrang-app-page .resource-tool-hero__inner {
+    gap: 0.85rem;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .bloomrang-app-page .resource-brand-logo--hero {
+    width: min(72vw, 17rem);
+    margin: 0.35rem 0 0;
+  }
+
+  .bloomrang-app-page .resource-tool-hero .lead {
+    display: none;
+  }
+
+  .bloomrang-app-page .resource-tool-hero__actions {
+    gap: 0.55rem;
+  }
+
+  .bloomrang-app-page .resource-tool-hero__actions .button {
+    flex: 1 1 10rem;
+    padding: 0.72rem 0.8rem;
+    font-size: 0.86rem;
+  }
+
+  .bloomrang-app-page .resource-back-link {
+    display: none;
+  }
+
+  .resource-app-section {
+    padding: 0;
+  }
+
+  .resource-app-section .shell {
+    width: 100%;
+  }
+
+  .resource-embed-card--app {
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .resource-app-chrome {
+    position: sticky;
+    top: 5rem;
+    z-index: 2;
+    padding: 0.62rem 1rem;
+    border-top: 1px solid rgba(13, 27, 42, 0.08);
+    border-bottom: 1px solid rgba(13, 27, 42, 0.08);
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+  }
+
+  .resource-app-chrome img {
+    width: 8.6rem;
+  }
+
+  .resource-app-chrome span {
+    font-size: 0.72rem;
+  }
+
+  .bloomrang-app-page .resource-embed {
+    height: calc(100svh - 13.2rem);
+    min-height: 34rem;
+    border-radius: 0;
+  }
+}
+
 @media (max-width: 560px) {
   .section {
     padding: 4.25rem 0;
+  }
+
+  .bloomrang-app-page .resource-app-section {
+    padding: 0;
+  }
+
+  .bloomrang-app-page .resource-tool-hero {
+    padding-top: 0.7rem;
+  }
+
+  .bloomrang-app-page .resource-tool-hero__actions .button {
+    flex-basis: 100%;
+  }
+
+  .bloomrang-app-page .resource-embed {
+    height: calc(100svh - 14.8rem);
+    min-height: 32rem;
   }
 
   .hero {

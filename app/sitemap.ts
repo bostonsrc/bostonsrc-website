@@ -5,6 +5,8 @@ const routes = [
   "/about",
   "/leadership-team",
   "/services",
+  "/resources",
+  "/resources/bloomrang",
   "/contact"
 ];
 

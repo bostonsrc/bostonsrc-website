@@ -1,0 +1,428 @@
+[
+  {
+    "id": "0001",
+    "type": "objective",
+    "text": "List the five rights of medication administration.",
+    "level": 1,
+    "why": "This asks learners to recall a stored list, so the thinking task is Remember."
+  },
+  {
+    "id": "0002",
+    "type": "question",
+    "text": "Which artery supplies most of the lateral wall of the left ventricle?",
+    "level": 1,
+    "why": "The learner only needs to retrieve a factual association, which is Remember."
+  },
+  {
+    "id": "0003",
+    "type": "objective",
+    "text": "Name three warning signs of sepsis in an adult inpatient.",
+    "level": 1,
+    "why": "Naming warning signs is straightforward recall of facts, so it fits Remember."
+  },
+  {
+    "id": "0004",
+    "type": "question",
+    "text": "What is the normal adult serum sodium range?",
+    "level": 1,
+    "why": "This is direct factual retrieval without interpretation, so it is Remember."
+  },
+  {
+    "id": "0005",
+    "type": "objective",
+    "text": "Identify the parts of a standard syringe.",
+    "level": 1,
+    "why": "The learner is recognizing labeled components, which is a Remember task."
+  },
+  {
+    "id": "0006",
+    "type": "question",
+    "text": "Which cranial nerve carries the afferent limb of the corneal reflex?",
+    "level": 1,
+    "why": "The answer depends on recalling a known fact, so it belongs in Remember."
+  },
+  {
+    "id": "0007",
+    "type": "objective",
+    "text": "Recall the sequence of basic life support steps for an adult collapse.",
+    "level": 1,
+    "why": "Even though the topic is clinical, the task is to retrieve a sequence from memory."
+  },
+  {
+    "id": "0008",
+    "type": "question",
+    "text": "What is the antidote for opioid overdose?",
+    "level": 1,
+    "why": "The learner is asked to remember a single fact, so this is Remember."
+  },
+  {
+    "id": "0009",
+    "type": "objective",
+    "text": "State the definition of informed consent.",
+    "level": 1,
+    "why": "Stating a definition requires recall of wording or meaning already learned."
+  },
+  {
+    "id": "0010",
+    "type": "question",
+    "text": "Which organism is most commonly associated with otitis media in children?",
+    "level": 1,
+    "why": "This is a recall item asking for a memorized association, so it is Remember."
+  },
+  {
+    "id": "0011",
+    "type": "objective",
+    "text": "Explain why fluid restriction is used in severe hyponatremia.",
+    "level": 2,
+    "why": "The learner must explain the meaning and rationale of a treatment approach, which is Understand."
+  },
+  {
+    "id": "0012",
+    "type": "question",
+    "text": "In your own words, why can hyperventilation lower carbon dioxide levels?",
+    "level": 2,
+    "why": "Paraphrasing the mechanism shows comprehension of meaning, so this is Understand."
+  },
+  {
+    "id": "0013",
+    "type": "objective",
+    "text": "Summarize how insulin lowers blood glucose after a meal.",
+    "level": 2,
+    "why": "Summarizing a mechanism shows grasp of meaning rather than carrying out a task."
+  },
+  {
+    "id": "0014",
+    "type": "question",
+    "text": "Why is hand hygiene recommended before and after patient contact?",
+    "level": 2,
+    "why": "The learner must explain the reason behind a practice, which fits Understand."
+  },
+  {
+    "id": "0015",
+    "type": "objective",
+    "text": "Describe the difference between screening and diagnostic testing.",
+    "level": 2,
+    "why": "Describing a distinction in meaning is an Understand task."
+  },
+  {
+    "id": "0016",
+    "type": "question",
+    "text": "A student says tachycardia always means shock. Explain why that statement is incomplete.",
+    "level": 2,
+    "why": "The learner interprets and clarifies meaning, which belongs in Understand."
+  },
+  {
+    "id": "0017",
+    "type": "objective",
+    "text": "Interpret what a rising creatinine value suggests about kidney function.",
+    "level": 2,
+    "why": "The task is to explain the meaning of a trend, so the level is Understand."
+  },
+  {
+    "id": "0018",
+    "type": "question",
+    "text": "What does it mean if a wound culture grows mixed skin flora?",
+    "level": 2,
+    "why": "The learner interprets the significance of a finding rather than using it to act."
+  },
+  {
+    "id": "0019",
+    "type": "objective",
+    "text": "Discuss how social determinants can affect diabetes control.",
+    "level": 2,
+    "why": "Discussing how factors influence an outcome is explaining relationships, which is Understand."
+  },
+  {
+    "id": "0020",
+    "type": "question",
+    "text": "Why might an elderly patient present with atypical symptoms during infection?",
+    "level": 2,
+    "why": "This asks for explanation of a clinical pattern, which is Understand."
+  },
+  {
+    "id": "0021",
+    "type": "objective",
+    "text": "Use the pediatric weight to calculate a paracetamol dose.",
+    "level": 3,
+    "why": "The learner must apply a dosing rule to a case, so the real task is Apply."
+  },
+  {
+    "id": "0022",
+    "type": "question",
+    "text": "A patient weighs 70 kg and needs enoxaparin at 1 mg/kg. How many milligrams should be prescribed?",
+    "level": 3,
+    "why": "This requires carrying out a calculation in a concrete situation, which is Apply."
+  },
+  {
+    "id": "0023",
+    "type": "objective",
+    "text": "Demonstrate proper donning of sterile gloves before a procedure.",
+    "level": 3,
+    "why": "Demonstrating a procedure means using knowledge and skill in practice, so it is Apply."
+  },
+  {
+    "id": "0024",
+    "type": "question",
+    "text": "Given this ECG strip, determine whether the rhythm is atrial fibrillation or sinus tachycardia.",
+    "level": 3,
+    "why": "The learner uses known criteria to classify a case, which fits Apply."
+  },
+  {
+    "id": "0025",
+    "type": "objective",
+    "text": "Carry out a focused respiratory examination on a breathless adult.",
+    "level": 3,
+    "why": "Performing the examination in a real clinical context is an Apply task."
+  },
+  {
+    "id": "0026",
+    "type": "question",
+    "text": "Using the pain ladder, choose the next analgesic step for a patient whose pain remains severe on paracetamol alone.",
+    "level": 3,
+    "why": "The learner uses a known framework to decide a next step, so this is Apply."
+  },
+  {
+    "id": "0027",
+    "type": "objective",
+    "text": "Use the Glasgow Coma Scale to score a patient after head injury.",
+    "level": 3,
+    "why": "Applying a scoring tool to a case is a classic Apply task."
+  },
+  {
+    "id": "0028",
+    "type": "question",
+    "text": "A prescription says 500 mL over 4 hours. What infusion rate should be set per hour?",
+    "level": 3,
+    "why": "The learner has to perform a procedure or calculation, which makes this Apply."
+  },
+  {
+    "id": "0029",
+    "type": "objective",
+    "text": "Explain how to insert a urinary catheter safely.",
+    "level": 3,
+    "why": "The verb suggests Understand, but the stated task is about carrying out a clinical procedure, so the real demand is Apply.",
+    "trap_verb": "Explain"
+  },
+  {
+    "id": "0030",
+    "type": "question",
+    "text": "A nurse says she understands insulin charts. Which lunchtime insulin dose should she give based on this chart?",
+    "level": 3,
+    "why": "The wording mentions understanding, but the learner must use the chart to act, which is Apply.",
+    "trap_verb": "understands"
+  },
+  {
+    "id": "0031",
+    "type": "objective",
+    "text": "Differentiate symptoms caused by left-sided heart failure from those caused by right-sided heart failure in a case summary.",
+    "level": 4,
+    "why": "The learner breaks information into meaningful categories and relationships, so this is Analyze."
+  },
+  {
+    "id": "0032",
+    "type": "question",
+    "text": "Review the medication list and identify which drugs most likely contributed to this patient’s fall.",
+    "level": 4,
+    "why": "The learner must sort contributing factors from a set of details, which is Analyze."
+  },
+  {
+    "id": "0033",
+    "type": "objective",
+    "text": "Analyze the causes of delayed antibiotic administration in a sepsis pathway.",
+    "level": 4,
+    "why": "Looking for causes and relationships within a process is Analyze."
+  },
+  {
+    "id": "0034",
+    "type": "question",
+    "text": "From this progress note, which data point most strongly suggests the patient is getting worse rather than improving?",
+    "level": 4,
+    "why": "The learner must inspect parts of the note and determine their significance, so it is Analyze."
+  },
+  {
+    "id": "0035",
+    "type": "objective",
+    "text": "Compare the findings of pneumonia and pulmonary edema on a chest X-ray report.",
+    "level": 4,
+    "why": "Comparing patterns and distinctions in data is an Analyze task."
+  },
+  {
+    "id": "0036",
+    "type": "question",
+    "text": "A learner can list sepsis criteria. Which clue in this case actually separates sepsis from uncomplicated infection?",
+    "level": 4,
+    "why": "The verb cue points toward recall, but the real task is separating relevant from less relevant data, which is Analyze.",
+    "trap_verb": "list"
+  },
+  {
+    "id": "0037",
+    "type": "objective",
+    "text": "Examine a discharge delay and sort the barriers into patient, team, and system factors.",
+    "level": 4,
+    "why": "Sorting causes into categories requires analysis of structure and relationships."
+  },
+  {
+    "id": "0038",
+    "type": "question",
+    "text": "Which statement in this consultation reveals the patient’s main concern, even though it is not said directly?",
+    "level": 4,
+    "why": "The learner interprets parts of a conversation to uncover an underlying pattern, which is Analyze."
+  },
+  {
+    "id": "0039",
+    "type": "objective",
+    "text": "Break down a medication error report to identify the point where the safety process failed.",
+    "level": 4,
+    "why": "The learner examines a sequence to locate a failure point, which is Analyze."
+  },
+  {
+    "id": "0040",
+    "type": "question",
+    "text": "A student says she can describe diabetic ketoacidosis. Which lab pattern in this case confirms it over simple hyperglycemia?",
+    "level": 4,
+    "why": "The surface verb is describe, but the learner must inspect and distinguish a pattern, so the true level is Analyze.",
+    "trap_verb": "describe"
+  },
+  {
+    "id": "0041",
+    "type": "objective",
+    "text": "Judge whether this discharge plan is safe for a patient who lives alone and has mild confusion.",
+    "level": 5,
+    "why": "The learner must make a judgment using safety criteria, which is Evaluate."
+  },
+  {
+    "id": "0042",
+    "type": "question",
+    "text": "Which of these two antibiotic choices is more appropriate for this patient, and why?",
+    "level": 5,
+    "why": "Choosing between options based on justification is Evaluate."
+  },
+  {
+    "id": "0043",
+    "type": "objective",
+    "text": "Appraise the quality of a student’s informed consent conversation using the communication rubric.",
+    "level": 5,
+    "why": "The learner judges performance against explicit criteria, so the level is Evaluate."
+  },
+  {
+    "id": "0044",
+    "type": "question",
+    "text": "A patient refuses blood products. Which management plan best respects autonomy while still addressing immediate risk?",
+    "level": 5,
+    "why": "The task is to weigh options and justify the best one, which is Evaluate."
+  },
+  {
+    "id": "0045",
+    "type": "objective",
+    "text": "Critique the strength of the evidence supporting routine vitamin D screening in healthy adults.",
+    "level": 5,
+    "why": "Critiquing evidence involves judgment based on standards, so it is Evaluate."
+  },
+  {
+    "id": "0046",
+    "type": "question",
+    "text": "Which handover note is safer for the night team, and what makes it better?",
+    "level": 5,
+    "why": "The learner evaluates alternatives using the quality of communication as a criterion."
+  },
+  {
+    "id": "0047",
+    "type": "objective",
+    "text": "Defend whether this student’s diagnosis is adequately supported by the case data.",
+    "level": 5,
+    "why": "The learner must judge the claim and justify that judgment, which is Evaluate."
+  },
+  {
+    "id": "0048",
+    "type": "question",
+    "text": "A trainee can explain both oxygen devices. Which device is the better choice for this patient and why?",
+    "level": 5,
+    "why": "The cue word explain is not the core task; the learner is selecting the better option using clinical criteria, so this is Evaluate.",
+    "trap_verb": "explain"
+  },
+  {
+    "id": "0049",
+    "type": "objective",
+    "text": "Assess whether this quality improvement proposal is likely to reduce missed follow-up appointments.",
+    "level": 5,
+    "why": "Assessing the likely value of a proposal requires reasoned judgment, which fits Evaluate."
+  },
+  {
+    "id": "0050",
+    "type": "question",
+    "text": "Which student-generated care plan is more defensible for this patient with multiple comorbidities?",
+    "level": 5,
+    "why": "The learner is weighing competing plans and defending a choice, which is Evaluate."
+  },
+  {
+    "id": "0051",
+    "type": "objective",
+    "text": "Design a counseling plan for a newly diagnosed patient starting insulin at home.",
+    "level": 6,
+    "why": "The learner must produce a new plan tailored to a situation, so this is Create."
+  },
+  {
+    "id": "0052",
+    "type": "question",
+    "text": "Write a discharge instruction sheet for a parent taking home a child with viral wheeze.",
+    "level": 6,
+    "why": "Writing an original instruction set for a scenario is a Create task."
+  },
+  {
+    "id": "0053",
+    "type": "objective",
+    "text": "Develop an OSCE station that tests safe inhaler technique.",
+    "level": 6,
+    "why": "Creating a new assessment station requires generating something original, so it is Create."
+  },
+  {
+    "id": "0054",
+    "type": "question",
+    "text": "Create a one-minute script for explaining anticoagulation risks to this patient.",
+    "level": 6,
+    "why": "The learner is generating a new communication product, which is Create."
+  },
+  {
+    "id": "0055",
+    "type": "objective",
+    "text": "Construct a ward checklist that reduces omitted medication doses on night shift.",
+    "level": 6,
+    "why": "Constructing a new tool to solve a problem belongs in Create."
+  },
+  {
+    "id": "0056",
+    "type": "question",
+    "text": "Your clinic wants fewer no-shows. Propose a small intervention and how it will work.",
+    "level": 6,
+    "why": "Proposing a new intervention is generating a novel solution, which is Create."
+  },
+  {
+    "id": "0057",
+    "type": "objective",
+    "text": "Plan a short teaching session that helps interns distinguish delirium from dementia.",
+    "level": 6,
+    "why": "Planning an original teaching session is a Create task."
+  },
+  {
+    "id": "0058",
+    "type": "question",
+    "text": "A student says she understands falls prevention. Draft a bedside checklist the team could use tomorrow.",
+    "level": 6,
+    "why": "The wording mentions understanding, but the learner must design a new practical tool, so the true level is Create.",
+    "trap_verb": "understands"
+  },
+  {
+    "id": "0059",
+    "type": "objective",
+    "text": "Produce a follow-up workflow for patients with newly abnormal blood results.",
+    "level": 6,
+    "why": "The learner is generating a new workflow, which belongs in Create."
+  },
+  {
+    "id": "0060",
+    "type": "question",
+    "text": "Build a brief rubric for rating the quality of student handovers in the emergency department.",
+    "level": 6,
+    "why": "Designing an original rubric is creating a new product, so this is Create."
+  }
+]

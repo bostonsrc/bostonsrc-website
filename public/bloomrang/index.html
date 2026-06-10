@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BloomRang</title>
+    <meta
+      name="description"
+      content="BloomRang is an interactive visual game for learning revised Bloom's taxonomy by sorting objectives and questions to the real cognitive level."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <p class="eyebrow">Learn Bloom's Taxonomy by Playing</p>
+          <img
+            src="./bloomrang-horizontal-light.png"
+            alt="BloomRang"
+            class="brand-logo"
+          />
+        </div>
+      </header>
+
+      <main id="app" class="app" aria-live="polite">
+        <section id="hero-card" class="hero-card">
+          <div>
+            <p class="hero-kicker" id="mode-label">Start</p>
+            <h2 id="hero-title">How do you want to begin?</h2>
+            <p class="hero-copy" id="hero-copy">
+              Learn Bloom's Taxonomy levels, practise the difference, or test yourself. BloomRang
+              should feel like a teacher beside you, not a textbook on a screen.
+            </p>
+          </div>
+          <div class="hero-stats">
+            <button id="home-button" class="ghost-button mode-home-button" hidden>Back to Start</button>
+          </div>
+        </section>
+
+        <section id="home-screen" class="home-screen">
+          <div id="home-intro" class="home-intro">
+            <p class="hero-kicker">Choose</p>
+            <h3 id="home-intro-title">What do you need right now?</h3>
+            <p id="home-intro-copy" class="home-copy">
+              Choose what you need right now: learn gently, test yourself, or build teaching material.
+            </p>
+            <div id="home-mode-switch" class="home-mode-switch" role="tablist" aria-label="Home mode switch">
+              <button class="home-mode-option is-active" data-home-mode="learning" role="tab" aria-selected="true">
+                Learn
+              </button>
+              <button class="home-mode-option" data-home-mode="gaming" role="tab" aria-selected="false">
+                Play/Test
+              </button>
+              <button class="home-mode-option" data-home-mode="toolkit" role="tab" aria-selected="false">
+                Faculty Toolkit
+              </button>
+            </div>
+          </div>
+
+          <section id="home-learning-view" class="home-mode-view" data-home-group="learning">
+            <div class="home-grid">
+              <article class="mode-card">
+                <p class="hero-kicker">Learn</p>
+                <h4>Teach me Bloom's Taxonomy first</h4>
+                <p class="mode-copy">
+                  Start slow. See what each level means, then sort simple teaching examples.
+                </p>
+                <button id="start-learn-button" class="primary-button">Start Learning</button>
+              </article>
+
+              <article class="mode-card">
+                <p class="hero-kicker">Mastery</p>
+                <h4>Help me practise</h4>
+                <p class="mode-copy">
+                  Pick one level and train your eye until you can recognise it quickly.
+                </p>
+                <button id="start-practice-button" class="secondary-button">Choose Practice</button>
+              </article>
+            </div>
+
+            <article class="home-support-card">
+              <p class="hero-kicker">Learning path</p>
+              <h4>First understand. Then sort.</h4>
+              <p class="mode-copy">
+                This path teaches before it tests. You will see examples, make choices,
+                and learn why an answer belongs at that level.
+              </p>
+              <div class="home-support-points">
+                <span class="support-pill">1. Learn the level</span>
+                <span class="support-pill">2. See an example</span>
+                <span class="support-pill">3. Sort a card</span>
+                <span class="support-pill">4. Read feedback</span>
+              </div>
+            </article>
+          </section>
+
+          <section id="home-gaming-view" class="home-mode-view" data-home-group="gaming" hidden>
+            <article class="game-mode-hero">
+              <div>
+                <p class="hero-kicker">Play/Test</p>
+                <h4>Skip the lesson and play</h4>
+                <p class="mode-copy">
+                  Already know the basics? Play a quick round and see how sharp your Bloom's Taxonomy judgement is.
+                </p>
+              </div>
+              <div class="game-mode-stats">
+                <div class="game-stat">
+                  <span class="stat-label">Round</span>
+                  <strong>10 cards</strong>
+                </div>
+                <div class="game-stat">
+                  <span class="stat-label">Style</span>
+                  <strong>Quick sort</strong>
+                </div>
+                <div class="game-stat">
+                  <span class="stat-label">Goal</span>
+                  <strong>Find your gaps</strong>
+                </div>
+              </div>
+              <div class="game-mode-actions">
+                <button id="start-challenge-button" class="primary-button">Start the Round</button>
+              </div>
+            </article>
+
+            <article class="game-mode-rules">
+              <p class="hero-kicker">Game path</p>
+              <h4>Less explanation, more judgement</h4>
+              <div class="home-support-points">
+                <span class="support-pill">Quick start</span>
+                <span class="support-pill">Score at the end</span>
+                <span class="support-pill">Reasons after sorting</span>
+                <span class="support-pill">Try again anytime</span>
+              </div>
+            </article>
+          </section>
+
+          <section id="home-toolkit-view" class="home-mode-view" data-home-group="toolkit" hidden>
+            <article class="toolkit-mode-hero">
+              <div>
+                <p class="hero-kicker">Faculty Toolkit</p>
+                <h4>Build better teaching material</h4>
+                <p class="mode-copy">
+                  Use this as your planning desk: verbs, question stems, and cleaner learning objectives.
+                </p>
+              </div>
+              <div class="home-support-points">
+                <span class="support-pill">Level guide</span>
+                <span class="support-pill">Verb library</span>
+                <span class="support-pill">Question stems</span>
+                <span class="support-pill">Objective studio</span>
+              </div>
+              <div class="game-mode-actions">
+                <button id="start-toolkit-button" class="primary-button">Open the Toolkit</button>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section id="learn-hub" class="mode-layer" hidden>
+          <article class="layer-intro-card">
+            <p class="hero-kicker">Learn</p>
+            <h3>Before you sort, see what each level means</h3>
+            <p class="home-copy">
+              First see the thinking behind each level. Then try a short guided game.
+            </p>
+          </article>
+
+          <section id="teach-panel" class="teach-panel">
+            <div class="teach-panel-header">
+              <div>
+                <p class="hero-kicker">Teach first</p>
+                <h3>The key question is simple</h3>
+                <p class="teach-copy">
+                  Tap a level and ask: what does the learner actually have to do?
+                  Then try the primer and feel the difference by playing.
+                </p>
+              </div>
+              <div class="teach-actions">
+                <button id="primer-button" class="primary-button">Try the Guided Game</button>
+                <button id="jump-daily-button" class="ghost-button">Test Yourself</button>
+              </div>
+            </div>
+
+            <div id="teach-levels" class="teach-levels" aria-label="Bloom's Taxonomy level guide"></div>
+
+            <div class="teach-detail">
+              <div>
+                <p class="hero-kicker" id="teach-detail-label">Thinking move</p>
+                <h4 id="teach-detail-title">Apply</h4>
+              </div>
+              <p id="teach-detail-body" class="teach-detail-body"></p>
+              <p id="teach-detail-prompt" class="teach-detail-prompt"></p>
+              <p id="teach-detail-example" class="teach-detail-example"></p>
+            </div>
+          </section>
+
+          <section id="insight-grid" class="insight-grid">
+            <article class="daily-lens-card">
+              <div class="daily-lens-top">
+                <div>
+                  <p class="hero-kicker" id="daily-lens-label">Bloom Lens</p>
+                  <h3 id="daily-lens-title">Apply in everyday life</h3>
+                </div>
+                <span id="daily-lens-badge" class="daily-lens-badge">Level 3</span>
+              </div>
+              <p id="daily-lens-body" class="daily-lens-body"></p>
+              <div class="daily-lens-example">
+                <p class="hero-kicker">Everyday picture</p>
+                <p id="daily-lens-analogy" class="daily-lens-analogy"></p>
+              </div>
+              <p id="daily-lens-prompt" class="daily-lens-prompt"></p>
+            </article>
+          </section>
+        </section>
+
+        <section id="practice-hub" class="mode-layer" hidden>
+          <article class="practice-launch-card">
+            <div class="daily-lens-top">
+              <div>
+                <p class="hero-kicker">Practice</p>
+                <h3>Which level do you want to train?</h3>
+              </div>
+            </div>
+            <p class="home-copy">
+              Focus on one level, or mix all six when you feel ready.
+            </p>
+            <div id="practice-level-picker" class="practice-level-picker" aria-label="Practice level picker"></div>
+            <div class="practice-launch-actions">
+              <button id="start-focused-practice-button" class="primary-button">Start Sorting</button>
+            </div>
+          </article>
+        </section>
+
+        <section id="toolkit-hub" class="mode-layer" hidden>
+          <section class="toolbox-card">
+            <div class="toolbox-header">
+              <div>
+                <p class="hero-kicker">Teacher Toolkit</p>
+                <h3>Plan your teaching with Bloom in mind</h3>
+              </div>
+              <p class="toolbox-copy">
+                Use these tools when you are planning a class, assessment, or workshop.
+              </p>
+            </div>
+
+            <div id="tool-tabs" class="tool-tabs" role="tablist" aria-label="Teacher toolkit tabs">
+              <button class="tool-tab is-active" data-tab="guide" role="tab" aria-selected="true">
+                Level guide
+              </button>
+              <button class="tool-tab" data-tab="verbs" role="tab" aria-selected="false">
+                Verb library
+              </button>
+              <button class="tool-tab" data-tab="questions" role="tab" aria-selected="false">
+                Question stems
+              </button>
+              <button class="tool-tab" data-tab="studio" role="tab" aria-selected="false">
+                Objective studio
+              </button>
+            </div>
+
+            <div id="tool-panel" class="tool-panel"></div>
+          </section>
+        </section>
+
+        <section id="coach-card" class="coach-card" hidden>
+          <div>
+            <p class="hero-kicker" id="coach-label">Thinking coach</p>
+            <h3 id="coach-title">Look past the verb</h3>
+          </div>
+          <p id="coach-body" class="coach-body"></p>
+          <p id="coach-prompt" class="coach-prompt"></p>
+        </section>
+
+        <section id="game-screen" class="game-screen" hidden>
+          <div class="cards-panel">
+            <div class="cards-panel-header">
+              <div>
+                <h3>Sort these cards</h3>
+                <p id="cards-helper">Move each card to the Bloom's Taxonomy level it really belongs to.</p>
+              </div>
+              <div class="selection-pill" id="selection-pill" hidden>
+                Selected card ready
+              </div>
+            </div>
+            <div id="tray-cards" class="tray-cards" aria-label="Cards to sort"></div>
+          </div>
+
+          <section class="ladder-panel">
+            <div class="ladder-header">
+              <h3>Bloom’s Ladder</h3>
+              <p>Drag a card, or tap a card and then tap a level.</p>
+            </div>
+            <div id="ladder" class="ladder" aria-label="Bloom taxonomy ladder"></div>
+          </section>
+        </section>
+
+        <section id="controls" class="controls" hidden>
+          <button id="check-button" class="primary-button" disabled>Check My Sorting</button>
+          <button id="next-button" class="secondary-button" hidden>Keep Going</button>
+        </section>
+
+        <section id="result-screen" class="result-screen" hidden>
+          <div class="result-card">
+            <p class="hero-kicker" id="result-mode-label">Result</p>
+            <h2 id="result-title">You finished this set</h2>
+            <p id="result-summary" class="result-summary"></p>
+            <div class="result-grid-wrap">
+              <div id="result-grid" class="result-grid" aria-label="Shareable score grid"></div>
+            </div>
+            <textarea id="share-text" class="share-text" readonly></textarea>
+            <div class="result-actions">
+              <button id="copy-button" class="primary-button">Copy Result</button>
+              <button id="practice-button" class="secondary-button">Practise More</button>
+              <button id="daily-button" class="ghost-button">Back to Start</button>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer-credit">
+          Created by
+          <a href="https://www.linkedin.com/in/waqarnaqvi/" target="_blank" rel="noopener noreferrer">
+            Waqar M. Naqvi
+          </a>,
+          PhD HPE, PhD PT, FIAP, International FAIMER Institute Fellow [2024]
+        </footer>
+      </main>
+    </div>
+
+    <div id="drag-ghost" class="drag-ghost" hidden></div>
+
+    <template id="card-template">
+      <article class="card" tabindex="0">
+        <div class="card-corner card-corner-top" aria-hidden="true">
+          <span class="card-rank"></span>
+          <span class="card-suit"></span>
+        </div>
+        <div class="card-face">
+          <div class="card-meta">
+            <span class="card-type"></span>
+            <span class="card-index"></span>
+          </div>
+          <p class="card-text"></p>
+          <div class="card-pips" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p class="card-reason" hidden></p>
+        </div>
+        <div class="card-corner card-corner-bottom" aria-hidden="true">
+          <span class="card-rank"></span>
+          <span class="card-suit"></span>
+        </div>
+      </article>
+    </template>
+
+    <template id="rung-template">
+      <section class="rung" tabindex="0">
+        <div class="rung-header">
+          <div>
+            <span class="rung-number"></span>
+            <h4 class="rung-title"></h4>
+            <span class="rung-object"></span>
+          </div>
+          <span class="rung-hint">Drop here</span>
+        </div>
+        <div class="rung-cards"></div>
+      </section>
+    </template>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
