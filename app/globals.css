@@ -581,57 +581,6 @@ main {
   justify-content: center;
 }
 
-.resource-app-section {
-  display: none;
-  padding-top: 2rem;
-}
-
-.resource-app-section:target {
-  display: block;
-}
-
-.resource-embed-card {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: #fff;
-}
-
-.resource-embed-card--app {
-  border-radius: 2rem;
-  background:
-    linear-gradient(135deg, rgba(248, 90, 98, 0.1), rgba(47, 142, 243, 0.09)),
-    #ffffff;
-  box-shadow: 0 2rem 5rem rgba(13, 27, 42, 0.16);
-  padding: 0.7rem;
-}
-
-.resource-app-chrome {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.6rem 0.8rem 0.9rem;
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.resource-app-chrome img {
-  width: 9.5rem;
-  height: auto;
-}
-
-.resource-embed {
-  width: 100%;
-  height: min(82vh, 58rem);
-  min-height: 42rem;
-  border: 0;
-  border-radius: 1.35rem;
-  background: #fff;
-}
-
 .services-cta p {
   max-width: 46rem;
   color: var(--muted);
@@ -1156,10 +1105,6 @@ main {
     width: 100%;
   }
 
-  .resource-embed {
-    min-height: 76vh;
-  }
-
   .hero__grid--editorial {
     grid-template-columns: minmax(0, 1.08fr) minmax(14rem, 0.78fr);
     gap: 2rem;
@@ -1212,55 +1157,11 @@ main {
     display: none;
   }
 
-  .resource-app-section {
-    padding: 0;
-  }
-
-  .resource-app-section .shell {
-    width: 100%;
-  }
-
-  .resource-embed-card--app {
-    border-right: 0;
-    border-left: 0;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-  }
-
-  .resource-app-chrome {
-    position: sticky;
-    top: 5rem;
-    z-index: 2;
-    padding: 0.62rem 1rem;
-    border-top: 1px solid rgba(13, 27, 42, 0.08);
-    border-bottom: 1px solid rgba(13, 27, 42, 0.08);
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(10px);
-  }
-
-  .resource-app-chrome img {
-    width: 8.6rem;
-  }
-
-  .resource-app-chrome span {
-    font-size: 0.72rem;
-  }
-
-  .bloomrang-app-page .resource-embed {
-    height: calc(100svh - 13.2rem);
-    min-height: 34rem;
-    border-radius: 0;
-  }
 }
 
 @media (max-width: 560px) {
   .section {
     padding: 4.25rem 0;
-  }
-
-  .bloomrang-app-page .resource-app-section {
-    padding: 0;
   }
 
   .bloomrang-app-page .resource-tool-hero {
@@ -1269,11 +1170,6 @@ main {
 
   .bloomrang-app-page .resource-tool-hero__actions .button {
     flex-basis: 100%;
-  }
-
-  .bloomrang-app-page .resource-embed {
-    height: calc(100svh - 14.8rem);
-    min-height: 32rem;
   }
 
   .hero {

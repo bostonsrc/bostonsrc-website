@@ -25,31 +25,15 @@ export default function BloomRangResourcePage() {
             </p>
           </div>
           <div className="resource-tool-hero__actions">
-            <a className="button" href="/bloomrang/index.html" target="_blank" rel="noopener noreferrer">
+            <a className="button" href="/bloomrang/" target="_blank" rel="noopener noreferrer">
               Click here for mobile version
             </a>
-            <a className="button button--secondary" href="#bloomrang-web-preview">
+            <a className="button button--secondary" href="/bloomrang/" target="_blank" rel="noopener noreferrer">
               Desktop version
             </a>
             <Link className="button button--secondary resource-back-link" href="/resources">
               Back to resources
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <section id="bloomrang-web-preview" className="section section--tight-top resource-app-section">
-        <div className="shell">
-          <div className="resource-embed-card resource-embed-card--app">
-            <div className="resource-app-chrome" aria-hidden="true">
-              <img src="/bloomrang/bloomrang-horizontal-light.png" alt="" />
-              <span>App preview</span>
-            </div>
-            <iframe
-              className="resource-embed"
-              src="/bloomrang/index.html"
-              title="BloomRang Bloom's Taxonomy Game Trainer"
-            />
           </div>
         </div>
       </section>
