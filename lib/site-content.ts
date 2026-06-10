@@ -169,10 +169,11 @@ export const advisoryProfiles = [
   {
     name: "Carlotte Kiekens",
     title: "Researcher and Director",
-    institution: "IRCCS Ospedale Galeazzi-Sant'Ambrogio and ISICO",
+    institution:
+      "Cochrane Rehabilitation, Functioning, and Disability|IRCCS Galeazzi Sant'Ambrogio Hospital and ISICO",
     country: "Italy",
     image: "/carlotte-kiekens.webp",
-    bio: "Dr. Carlotte Kiekens is a Physical and Rehabilitation Medicine physician and researcher based in Milan, Italy. She holds an MD from KU Leuven and is a certified specialist in Physical and Rehabilitation Medicine and insurance medicine. She co-founded Cochrane Rehabilitation in 2016 and has served as its Co-Director since 2020, becoming Director of the Thematic Group Cochrane Rehabilitation, Functioning and Disability in 2026. She has served as Chair of the ISPRM-WHO Liaison Committee and held executive roles in the European Society of PRM and the UEMS PRM Section. With more than 230 PubMed-indexed publications and a Scopus h-index of 34, her expertise spans spinal cord injury, evidence-based rehabilitation, quality of care, health systems, and disability.",
+    bio: "Dr. Carlotte Kiekens is a Physical and Rehabilitation Medicine physician and researcher based in Milan, Italy. She holds an MD from KU Leuven and is a certified specialist in Physical and Rehabilitation Medicine and insurance medicine. She co-founded Cochrane Rehabilitation in 2016 and has served as Co-Director since 2020, becoming Director of the Thematic Group Cochrane Rehabilitation, Functioning, and Disability in 2026. She has served as Chair of the ISPRM-WHO Liaison Committee and held executive roles in the European Society of PRM and the UEMS PRM Section. With more than 230 PubMed-indexed publications and a Scopus h-index of 34, her expertise spans spinal cord injury, evidence-based rehabilitation, quality of care, health systems, and disability.",
     expertise: [
       "Physical and rehabilitation medicine",
       "Evidence-based rehabilitation",

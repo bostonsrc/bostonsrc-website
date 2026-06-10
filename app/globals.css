@@ -712,13 +712,17 @@ main {
 }
 
 .profile-title-line {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
 }
 
 .profile-affiliation {
   color: var(--ink);
   font-weight: 500;
   letter-spacing: 0.01em;
+}
+
+.profile-affiliation span {
+  display: block;
 }
 
 .profile-credentials {

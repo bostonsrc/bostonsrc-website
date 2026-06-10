@@ -203,7 +203,11 @@ export default function LeadershipTeamPage() {
                 <h3 className="section-title section-title--small">{profile.name}</h3>
                 <p className="profile-meta">
                   <span className="profile-title-line">{profile.title}</span>
-                  <span className="profile-affiliation">{profile.institution}</span>
+                  <span className="profile-affiliation">
+                    {profile.institution.split("|").map((line) => (
+                      <span key={line}>{line}</span>
+                    ))}
+                  </span>
                 </p>
                 <p>{profile.bio}</p>
                 <LinkedInIconLink
