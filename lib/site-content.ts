@@ -179,7 +179,9 @@ export const advisoryProfiles = [
       "Spinal cord injury",
       "Health systems",
       "Cochrane methodology"
-    ]
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/carlotte-kiekens-6078b737/"
   },
   {
     name: "Joshua Zadro",
