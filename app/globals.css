@@ -582,7 +582,12 @@ main {
 }
 
 .resource-app-section {
+  display: none;
   padding-top: 2rem;
+}
+
+.resource-app-section:target {
+  display: block;
 }
 
 .resource-embed-card {
