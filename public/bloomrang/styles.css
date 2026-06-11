@@ -62,7 +62,7 @@ textarea {
   justify-content: space-between;
   gap: 16px;
   align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: clamp(18px, 3vw, 28px);
 }
 
 .brand-lockup {
@@ -113,6 +113,8 @@ p {
 .home-screen {
   display: grid;
   gap: 18px;
+  width: min(100%, 780px);
+  margin: 0 auto;
 }
 
 .home-mode-view {
@@ -552,6 +554,7 @@ p {
 
 .daily-lens-card,
 .toolbox-card {
+  min-width: 0;
   background: var(--surface);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -611,9 +614,13 @@ p {
   gap: 10px;
   flex-wrap: wrap;
   margin-top: 16px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .tool-tab {
+  flex: 0 0 auto;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.68);
   color: var(--muted);
@@ -630,6 +637,8 @@ p {
 
 .tool-panel {
   margin-top: 16px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .verb-library {
@@ -808,6 +817,7 @@ p {
 .studio-form {
   display: grid;
   gap: 12px;
+  min-width: 0;
 }
 
 .studio-field {
@@ -824,6 +834,7 @@ p {
 .studio-input,
 .studio-select {
   width: 100%;
+  min-width: 0;
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 14px;
@@ -1324,6 +1335,10 @@ button:not(:disabled):hover {
   .game-screen {
     grid-template-columns: 1.05fr 1.2fr;
     align-items: start;
+  }
+
+  .ladder {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero-card {

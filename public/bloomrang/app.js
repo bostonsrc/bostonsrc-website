@@ -1457,7 +1457,9 @@ function renderTray(cards, totalCards) {
   if (cards.length === 0) {
     const done = document.createElement("p");
     done.className = "cards-helper";
-    done.textContent = `All ${totalCards} cards are placed. Ready to check.`;
+    done.textContent = totalCards === 1
+      ? "Card placed. Ready to check."
+      : `All ${totalCards} cards are placed. Ready to check.`;
     elements.trayCards.append(done);
     return;
   }
