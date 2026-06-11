@@ -39,12 +39,12 @@
 
         <section id="home-screen" class="home-screen">
           <div id="home-intro" class="home-intro">
-            <p class="hero-kicker">Start</p>
-            <h3 id="home-intro-title">Start with one quick scenario</h3>
+            <p class="hero-kicker">One clear start</p>
+            <h3 id="home-intro-title">Try one real teaching card</h3>
             <p id="home-intro-copy" class="home-copy">
-              One teaching card. One Bloom's level. Then a clear reason.
+              No setup. No long reading. Choose the Bloom's Taxonomy level and learn from the reason.
             </p>
-            <div id="home-mode-switch" class="home-mode-switch" role="tablist" aria-label="Home mode switch">
+            <div id="home-mode-switch" class="home-mode-switch" role="tablist" aria-label="Home mode switch" hidden>
               <button class="home-mode-option is-active" data-home-mode="gaming" role="tab" aria-selected="true">
                 Quick Scenario
               </button>
@@ -98,13 +98,17 @@
             <article class="game-mode-hero">
               <div>
                 <p class="hero-kicker">Quick Scenario</p>
-                <h4>Can you spot the real thinking level?</h4>
+                <h4>Can you spot the thinking level?</h4>
                 <p class="mode-copy">
-                  Start with a card. Choose the level. Learn from the explanation.
+                  One card appears. You tap the level. BloomRang explains the answer.
                 </p>
               </div>
               <div class="game-mode-actions">
                 <button id="start-challenge-button" class="primary-button">Start Quick Scenario</button>
+              </div>
+              <div class="home-secondary-actions" aria-label="Other ways to use BloomRang">
+                <button id="quick-learn-button" class="soft-action-button">Teach me first</button>
+                <button id="quick-toolkit-button" class="soft-action-button">Improve an objective</button>
               </div>
             </article>
           </section>

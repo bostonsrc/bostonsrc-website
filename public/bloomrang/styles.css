@@ -288,6 +288,38 @@ p {
   justify-content: flex-start;
 }
 
+.game-mode-actions .primary-button {
+  min-width: min(100%, 260px);
+  min-height: 54px;
+  font-size: 1.02rem;
+}
+
+.home-secondary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  padding-top: 6px;
+  border-top: 1px solid rgba(32, 27, 45, 0.08);
+}
+
+.soft-action-button {
+  border: 1px solid rgba(32, 27, 45, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--muted);
+  padding: 10px 13px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 140ms ease, border-color 140ms ease, color 140ms ease;
+}
+
+.soft-action-button:hover {
+  border-color: rgba(248, 90, 98, 0.22);
+  color: var(--ink);
+}
+
 .game-mode-rules {
   background:
     linear-gradient(135deg, rgba(47, 142, 243, 0.1), rgba(141, 87, 217, 0.1)),
@@ -1346,7 +1378,8 @@ button:not(:disabled):hover {
 
   .primary-button,
   .secondary-button,
-  .ghost-button {
+  .ghost-button,
+  .soft-action-button {
     width: 100%;
     justify-content: center;
   }

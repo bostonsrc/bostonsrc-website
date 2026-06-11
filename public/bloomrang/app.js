@@ -636,6 +636,8 @@ const elements = {
   homeIntroTitle: document.querySelector("#home-intro-title"),
   homeIntroCopy: document.querySelector("#home-intro-copy"),
   homeModeSwitch: document.querySelector("#home-mode-switch"),
+  quickLearnButton: document.querySelector("#quick-learn-button"),
+  quickToolkitButton: document.querySelector("#quick-toolkit-button"),
   startLearnButton: document.querySelector("#start-learn-button"),
   startPracticeButton: document.querySelector("#start-practice-button"),
   startChallengeButton: document.querySelector("#start-challenge-button"),
@@ -717,6 +719,8 @@ function setupButtons() {
   elements.jumpDailyButton.addEventListener("click", startChallengeSession);
   elements.homeButton.addEventListener("click", openHome);
   elements.homeModeSwitch.addEventListener("click", handleHomeModeSwitchClick);
+  elements.quickLearnButton.addEventListener("click", openLearnHub);
+  elements.quickToolkitButton.addEventListener("click", openToolkitHub);
   elements.startLearnButton.addEventListener("click", openLearnHub);
   elements.startPracticeButton.addEventListener("click", openPracticeHub);
   elements.startChallengeButton.addEventListener("click", startChallengeSession);
@@ -869,14 +873,18 @@ function renderVisibility() {
   const isToolkitHub = mode === "toolkitHub";
   const isPlayMode = mode === "practice" || mode === "challenge" || mode === "learn";
 
+  elements.heroCard.hidden = isHome;
   elements.homeScreen.hidden = !isHome;
+  elements.homeIntro.hidden = isHome;
   elements.homeButton.hidden = isHome;
   elements.learnHub.hidden = !isLearnHub;
   elements.practiceHub.hidden = !isPracticeHub;
   elements.toolkitHub.hidden = !isToolkitHub;
   elements.teachPanel.hidden = !isLearnHub;
   elements.insightGrid.hidden = !isLearnHub;
-  elements.coachCard.hidden = !(isLearn || mode === "practice" || mode === "challenge");
+  const shouldShowCoach =
+    isLearn || ((mode === "practice" || mode === "challenge") && Boolean(state.session?.revealReady));
+  elements.coachCard.hidden = !shouldShowCoach;
   elements.gameScreen.hidden = !isPlayMode || Boolean(state.session?.completed);
   elements.controls.hidden = !isPlayMode || Boolean(state.session?.completed);
   elements.resultScreen.hidden = !Boolean(state.session?.completed);
@@ -912,9 +920,9 @@ function renderHomeMode() {
   }
 
   if (isGaming) {
-    elements.homeIntroTitle.textContent = "Start with one quick scenario";
+    elements.homeIntroTitle.textContent = "Try one real teaching card";
     elements.homeIntroCopy.textContent =
-      "One teaching card. One Bloom's level. Then a clear reason.";
+      "No setup. No long reading. Choose the Bloom's Taxonomy level and learn from the reason.";
     return;
   }
 
