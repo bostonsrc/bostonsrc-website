@@ -129,34 +129,27 @@
           </section>
         </section>
 
-        <section id="learn-hub" class="mode-layer" hidden>
-          <article class="layer-intro-card">
-            <p class="hero-kicker">Learn</p>
-            <h3>Before you match, see what each level means</h3>
-            <p class="home-copy">
-              First see the thinking behind each level. Then try a short guided game.
-            </p>
-          </article>
-
-          <section id="teach-panel" class="teach-panel">
+        <section id="learn-hub" class="mode-layer learn-flow" hidden>
+          <section id="teach-panel" class="teach-panel teach-panel-compact">
             <div class="teach-panel-header">
               <div>
-                <p class="hero-kicker">Teach first</p>
-                <h3>The key question is simple</h3>
+                <p class="hero-kicker">Teach me first</p>
+                <h3>What must the learner do?</h3>
                 <p class="teach-copy">
-                  Tap a level and ask: what does the learner actually have to do?
-                  Then try the primer and feel the difference by playing.
+                  That one question makes Bloom's Taxonomy easier.
+                  Tap a level, or start with one guided card.
                 </p>
               </div>
               <div class="teach-actions">
-                <button id="primer-button" class="primary-button">Try the Guided Game</button>
-                <button id="jump-daily-button" class="ghost-button">Test Yourself</button>
+                <button id="learn-back-button" class="inline-back-button">Back</button>
+                <button id="primer-button" class="primary-button">Start Guided Card</button>
+                <button id="jump-daily-button" class="ghost-button">Skip to Scenario</button>
               </div>
             </div>
 
             <div id="teach-levels" class="teach-levels" aria-label="Bloom's Taxonomy level guide"></div>
 
-            <div class="teach-detail">
+            <div class="teach-detail teach-detail-compact">
               <div>
                 <p class="hero-kicker" id="teach-detail-label">Thinking move</p>
                 <h4 id="teach-detail-title">Apply</h4>
@@ -167,7 +160,7 @@
             </div>
           </section>
 
-          <section id="insight-grid" class="insight-grid">
+          <section id="insight-grid" class="insight-grid" hidden>
             <article class="daily-lens-card">
               <div class="daily-lens-top">
                 <div>
@@ -216,20 +209,23 @@
               </p>
             </div>
 
-            <div id="tool-tabs" class="tool-tabs" role="tablist" aria-label="Teacher toolkit tabs">
-              <button class="tool-tab is-active" data-tab="studio" role="tab" aria-selected="true">
-                Objective studio
-              </button>
-              <button class="tool-tab" data-tab="guide" role="tab" aria-selected="false">
-                Level guide
-              </button>
-              <button class="tool-tab" data-tab="verbs" role="tab" aria-selected="false">
-                Verb library
-              </button>
-              <button class="tool-tab" data-tab="questions" role="tab" aria-selected="false">
-                Question stems
-              </button>
-            </div>
+            <details class="tool-tabs-drawer">
+              <summary>More tools</summary>
+              <div id="tool-tabs" class="tool-tabs" role="tablist" aria-label="Teacher toolkit tabs">
+                <button class="tool-tab is-active" data-tab="studio" role="tab" aria-selected="true">
+                  Objective studio
+                </button>
+                <button class="tool-tab" data-tab="guide" role="tab" aria-selected="false">
+                  Level guide
+                </button>
+                <button class="tool-tab" data-tab="verbs" role="tab" aria-selected="false">
+                  Verb library
+                </button>
+                <button class="tool-tab" data-tab="questions" role="tab" aria-selected="false">
+                  Question stems
+                </button>
+              </div>
+            </details>
 
             <div id="tool-panel" class="tool-panel"></div>
           </section>

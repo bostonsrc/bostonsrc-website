@@ -682,6 +682,7 @@ const elements = {
   coachPrompt: document.querySelector("#coach-prompt"),
   primerButton: document.querySelector("#primer-button"),
   jumpDailyButton: document.querySelector("#jump-daily-button"),
+  learnBackButton: document.querySelector("#learn-back-button"),
   dailyLensLabel: document.querySelector("#daily-lens-label"),
   dailyLensTitle: document.querySelector("#daily-lens-title"),
   dailyLensBadge: document.querySelector("#daily-lens-badge"),
@@ -717,6 +718,7 @@ function setupButtons() {
   elements.dailyButton.addEventListener("click", handleSecondaryResultAction);
   elements.primerButton.addEventListener("click", startLearnSession);
   elements.jumpDailyButton.addEventListener("click", startChallengeSession);
+  elements.learnBackButton.addEventListener("click", openHome);
   elements.homeButton.addEventListener("click", openHome);
   elements.homeModeSwitch.addEventListener("click", handleHomeModeSwitchClick);
   elements.quickLearnButton.addEventListener("click", openLearnHub);
@@ -858,10 +860,10 @@ function renderTeachPanel() {
   const detail = LEVEL_MAP.get(state.selectedLevel);
   elements.teachDetailLabel.textContent = "Thinking move";
   elements.teachDetailTitle.textContent = detail.label;
-  elements.teachDetailBody.textContent = detail.body;
+  elements.teachDetailBody.textContent = detail.cue;
   elements.teachDetailPrompt.textContent = detail.prompt;
   elements.teachDetailExample.textContent = detail.example;
-  elements.primerButton.textContent = state.progress.primerDone ? "Replay the Guided Game" : "Try the Guided Game";
+  elements.primerButton.textContent = state.progress.primerDone ? "Replay Guided Card" : "Start Guided Card";
 }
 
 function renderVisibility() {
@@ -873,7 +875,7 @@ function renderVisibility() {
   const isToolkitHub = mode === "toolkitHub";
   const isPlayMode = mode === "practice" || mode === "challenge" || mode === "learn";
 
-  elements.heroCard.hidden = isHome;
+  elements.heroCard.hidden = isHome || isLearnHub;
   elements.homeScreen.hidden = !isHome;
   elements.homeIntro.hidden = isHome;
   elements.homeButton.hidden = isHome;
@@ -881,9 +883,8 @@ function renderVisibility() {
   elements.practiceHub.hidden = !isPracticeHub;
   elements.toolkitHub.hidden = !isToolkitHub;
   elements.teachPanel.hidden = !isLearnHub;
-  elements.insightGrid.hidden = !isLearnHub;
-  const shouldShowCoach =
-    isLearn || ((mode === "practice" || mode === "challenge") && Boolean(state.session?.revealReady));
+  elements.insightGrid.hidden = true;
+  const shouldShowCoach = Boolean(state.session?.revealReady);
   elements.coachCard.hidden = !shouldShowCoach;
   elements.gameScreen.hidden = !isPlayMode || Boolean(state.session?.completed);
   elements.controls.hidden = !isPlayMode || Boolean(state.session?.completed);
@@ -1218,9 +1219,9 @@ function getHeaderCopy(mode) {
   if (mode === "learnHub") {
     return {
       modeLabel: "Learn",
-      title: "See what each Bloom's Taxonomy level asks learners to do",
+      title: "Learn Bloom's Taxonomy first",
       copy:
-        "Tap a level. Read the simple example. Then play the guided game when it starts to click.",
+        "One question: what must the learner do? Tap a level or start one guided card.",
     };
   }
 
@@ -1245,9 +1246,9 @@ function getHeaderCopy(mode) {
   if (mode === "learn") {
     return {
       modeLabel: "Guided primer",
-      title: "Learn Bloom's Taxonomy by feeling the difference",
+      title: "Try one guided card",
       copy:
-        "Each card teaches one common confusion. Match it, see the answer, then notice why another level was tempting.",
+        "Choose the level first. BloomRang explains the thinking after you answer.",
     };
   }
 
