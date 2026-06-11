@@ -6,7 +6,7 @@
     <title>BloomRang</title>
     <meta
       name="description"
-      content="BloomRang is an interactive visual game for learning revised Bloom's taxonomy by sorting objectives and questions to the real cognitive level."
+      content="BloomRang is an interactive visual game for learning revised Bloom's taxonomy by matching objectives and questions to the real cognitive level."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -64,7 +64,7 @@
                 <p class="hero-kicker">Learn</p>
                 <h4>Teach me Bloom's Taxonomy first</h4>
                 <p class="mode-copy">
-                  Start slow. See what each level means, then sort simple teaching examples.
+                  Start slow. See what each level means, then match simple teaching examples.
                 </p>
                 <button id="start-learn-button" class="primary-button">Start Learning</button>
               </article>
@@ -81,7 +81,7 @@
 
             <article class="home-support-card">
               <p class="hero-kicker">Learning path</p>
-              <h4>First understand. Then sort.</h4>
+              <h4>First understand. Then match.</h4>
               <p class="mode-copy">
                 This path teaches before it tests. You will see examples, make choices,
                 and learn why an answer belongs at that level.
@@ -89,7 +89,7 @@
               <div class="home-support-points">
                 <span class="support-pill">1. Learn the level</span>
                 <span class="support-pill">2. See an example</span>
-                <span class="support-pill">3. Sort a card</span>
+                <span class="support-pill">3. Match a card</span>
                 <span class="support-pill">4. Read feedback</span>
               </div>
             </article>
@@ -111,7 +111,7 @@
                 </div>
                 <div class="game-stat">
                   <span class="stat-label">Style</span>
-                  <strong>Quick sort</strong>
+                  <strong>Quick match</strong>
                 </div>
                 <div class="game-stat">
                   <span class="stat-label">Goal</span>
@@ -129,7 +129,7 @@
               <div class="home-support-points">
                 <span class="support-pill">Quick start</span>
                 <span class="support-pill">Score at the end</span>
-                <span class="support-pill">Reasons after sorting</span>
+                <span class="support-pill">Reasons after matching</span>
                 <span class="support-pill">Try again anytime</span>
               </div>
             </article>
@@ -160,7 +160,7 @@
         <section id="learn-hub" class="mode-layer" hidden>
           <article class="layer-intro-card">
             <p class="hero-kicker">Learn</p>
-            <h3>Before you sort, see what each level means</h3>
+            <h3>Before you match, see what each level means</h3>
             <p class="home-copy">
               First see the thinking behind each level. Then try a short guided game.
             </p>
@@ -227,7 +227,7 @@
             </p>
             <div id="practice-level-picker" class="practice-level-picker" aria-label="Practice level picker"></div>
             <div class="practice-launch-actions">
-              <button id="start-focused-practice-button" class="primary-button">Start Sorting</button>
+              <button id="start-focused-practice-button" class="primary-button">Start Matching</button>
             </div>
           </article>
         </section>
@@ -276,27 +276,27 @@
           <div class="cards-panel">
             <div class="cards-panel-header">
               <div>
-                <h3>Sort these cards</h3>
-                <p id="cards-helper">Move each card to the Bloom's Taxonomy level it really belongs to.</p>
+                <h3>Match these cards</h3>
+                <p id="cards-helper">Tap a card, then tap the Bloom's Taxonomy level it matches.</p>
               </div>
               <div class="selection-pill" id="selection-pill" hidden>
-                Selected card ready
+                Now tap a level
               </div>
             </div>
-            <div id="tray-cards" class="tray-cards" aria-label="Cards to sort"></div>
+            <div id="tray-cards" class="tray-cards" aria-label="Cards to match"></div>
           </div>
 
           <section class="ladder-panel">
             <div class="ladder-header">
               <h3>Bloom’s Ladder</h3>
-              <p>Drag a card, or tap a card and then tap a level.</p>
+              <p>Choose the level that matches the card.</p>
             </div>
             <div id="ladder" class="ladder" aria-label="Bloom taxonomy ladder"></div>
           </section>
         </section>
 
         <section id="controls" class="controls" hidden>
-          <button id="check-button" class="primary-button" disabled>Check My Sorting</button>
+          <button id="check-button" class="primary-button" disabled>Check My Matches</button>
           <button id="next-button" class="secondary-button" hidden>Keep Going</button>
         </section>
 

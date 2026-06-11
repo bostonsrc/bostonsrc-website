@@ -1362,4 +1362,123 @@ button:not(:disabled):hover {
     overflow-x: auto;
     padding-bottom: 4px;
   }
+
+  .cards-panel {
+    background:
+      linear-gradient(135deg, rgba(23, 111, 96, 0.9), rgba(32, 27, 45, 0.92));
+  }
+
+  .cards-panel-header,
+  .ladder-header {
+    align-items: flex-start;
+  }
+
+  .selection-pill {
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--ink);
+  }
+
+  .tray-cards,
+  .ladder {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .tray-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 14px;
+    border-radius: 18px;
+    cursor: pointer;
+    touch-action: manipulation;
+    box-shadow: 0 10px 22px rgba(32, 27, 45, 0.14);
+  }
+
+  .card::before,
+  .card::after,
+  .card-corner,
+  .card-pips {
+    display: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card-meta {
+    padding: 0;
+    margin-bottom: 8px;
+    font-size: 0.68rem;
+  }
+
+  .card-face {
+    min-height: auto;
+  }
+
+  .card-text {
+    padding: 0;
+    font-size: 0.96rem;
+  }
+
+  .tray-cards.has-selection .card:not(.is-selected) {
+    opacity: 0.48;
+    transform: scale(0.98);
+  }
+
+  .card.is-selected {
+    border-color: rgba(47, 142, 243, 0.76);
+    box-shadow:
+      0 14px 28px rgba(47, 142, 243, 0.24),
+      inset 0 0 0 4px rgba(47, 142, 243, 0.12);
+  }
+
+  .ladder {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rung {
+    min-height: auto;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 16px;
+  }
+
+  .game-screen.has-card-selected:not(.is-reviewing) .rung {
+    border-color: rgba(32, 180, 155, 0.42);
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(239, 255, 251, 0.82)),
+      repeating-linear-gradient(45deg, rgba(32, 180, 155, 0.05) 0 6px, transparent 6px 12px);
+  }
+
+  .rung-header {
+    display: block;
+  }
+
+  .rung-title {
+    font-size: 0.94rem;
+  }
+
+  .rung-number {
+    font-size: 0.62rem;
+  }
+
+  .rung-object {
+    display: none;
+  }
+
+  .rung-hint {
+    display: block;
+    margin-top: 4px;
+    text-align: left;
+    font-size: 0.7rem;
+  }
+
+  .game-screen:not(.is-reviewing) .rung-cards {
+    display: none;
+  }
 }

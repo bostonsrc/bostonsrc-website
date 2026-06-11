@@ -1198,9 +1198,9 @@ function getHeaderCopy(mode) {
           ? "Ready? Test your Bloom's Taxonomy judgement"
           : "Make objectives and questions sharper",
       copy: isLearning
-        ? "BloomRang teaches one Bloom's Taxonomy level at a time, with examples first and sorting after. No guessing, no pressure."
+        ? "BloomRang teaches one Bloom's Taxonomy level at a time, with examples first and matching after. No guessing, no pressure."
         : isGaming
-          ? "Jump into a quick sorting challenge. You will see where your Bloom's Taxonomy thinking is strong and where it needs work."
+          ? "Jump into a quick matching challenge. You will see where your Bloom's Taxonomy thinking is strong and where it needs work."
           : "Paste an objective, explore verbs, and build better questions for each Bloom's Taxonomy level.",
     };
   }
@@ -1237,7 +1237,7 @@ function getHeaderCopy(mode) {
       modeLabel: "Guided primer",
       title: "Learn Bloom's Taxonomy by feeling the difference",
       copy:
-        "Each card teaches one common confusion. Sort it, see the answer, then notice why another level was tempting.",
+        "Each card teaches one common confusion. Match it, see the answer, then notice why another level was tempting.",
     };
   }
 
@@ -1258,7 +1258,7 @@ function getHeaderCopy(mode) {
 
   return {
     modeLabel: "Challenge mode",
-    title: "Sort fast, then learn from the reasons",
+    title: "Match fast, then learn from the reasons",
     copy:
       "This is the game path. Trust the task, not only the verb, and see how cleanly you can classify the set.",
   };
@@ -1277,12 +1277,12 @@ function getCardsHelperText() {
   }
 
   if (session.mode === "learn") {
-    return "Move the card to the level you think fits. BloomRang will check it right away.";
+    return "Tap the card, then tap the level you think fits. BloomRang will check it right away.";
   }
 
   return session.mode === "challenge"
-    ? `Sort all ${count} cards, then check your round.`
-    : `Sort all ${count} cards, then check your practice.`;
+    ? `Match all ${count} cards, then check your round.`
+    : `Match all ${count} cards, then check your practice.`;
 }
 
 function renderCoach() {
@@ -1419,6 +1419,8 @@ function renderRound() {
   elements.nextButton.hidden = !state.session.revealReady;
   elements.selectionPill.hidden = !state.selectedCardId;
   elements.nextButton.textContent = getNextButtonText();
+  elements.gameScreen.classList.toggle("is-reviewing", state.session.revealReady);
+  elements.gameScreen.classList.toggle("has-card-selected", Boolean(state.selectedCardId));
 
   renderTray(unplaced, round.length);
   renderLadder(round);
@@ -1437,6 +1439,7 @@ function getNextButtonText() {
 
 function renderTray(cards, totalCards) {
   elements.trayCards.innerHTML = "";
+  elements.trayCards.classList.toggle("has-selection", Boolean(state.selectedCardId));
   if (cards.length === 0) {
     const done = document.createElement("p");
     done.className = "cards-helper";
@@ -1459,7 +1462,9 @@ function renderLadder(round) {
     fragment.querySelector(".rung-number").textContent = `Level ${level.value}`;
     fragment.querySelector(".rung-title").textContent = level.label;
     fragment.querySelector(".rung-object").textContent = LEVEL_OBJECTS[level.value];
-    fragment.querySelector(".rung-hint").textContent = level.cue;
+    fragment.querySelector(".rung-hint").textContent = state.selectedCardId && !state.session.revealReady
+      ? "Tap to match"
+      : level.cue;
 
     fragment.addEventListener("click", () => {
       if (!state.selectedCardId || state.session.revealReady) return;
@@ -1539,6 +1544,7 @@ function attachPointerDrag(element, cardId) {
   element.addEventListener("pointerdown", (event) => {
     if (state.session.revealReady) return;
     if (event.pointerType === "mouse" && event.button !== 0) return;
+    if (event.pointerType !== "mouse") return;
 
     const sourceRect = element.getBoundingClientRect();
     const ghost = buildGhost(element);
@@ -1886,7 +1892,7 @@ function formatEmojiGrid(results, width) {
 
 function buildShareText({ mode, dateKey, correct, total, rank, grid }) {
   const title = mode === "challenge" ? `BloomRang Challenge ${dateKey}` : "BloomRang Practice";
-  return `${title}\n${correct}/${total} ${rank.label}\n${grid}\nSort the real thinking task, not just the verb.`;
+  return `${title}\n${correct}/${total} ${rank.label}\n${grid}\nMatch the real thinking task, not just the verb.`;
 }
 
 function getLevelLabel(level) {
