@@ -1546,6 +1546,7 @@ function attachPointerDrag(element, cardId) {
     if (event.pointerType === "mouse" && event.button !== 0) return;
     if (event.pointerType !== "mouse") return;
 
+    const wasSelected = state.selectedCardId === cardId;
     const sourceRect = element.getBoundingClientRect();
     const ghost = buildGhost(element);
 
@@ -1592,6 +1593,13 @@ function attachPointerDrag(element, cardId) {
         };
         assignCardToLevel(cardId, targetLevel);
       } else {
+        if (!state.dragging?.started) {
+          state.selectedCardId = wasSelected ? null : cardId;
+        }
+        state.suppressClick = {
+          cardId,
+          until: Date.now() + 250,
+        };
         render();
       }
 
