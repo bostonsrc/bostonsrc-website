@@ -152,14 +152,13 @@ p {
 
 .home-intro.is-gaming-mode {
   background:
-    linear-gradient(135deg, rgba(32, 27, 45, 0.92), rgba(88, 52, 125, 0.9)),
+    linear-gradient(135deg, rgba(248, 90, 98, 0.1), rgba(32, 180, 155, 0.08), rgba(47, 142, 243, 0.08)),
     var(--surface);
-  color: #fff8fb;
 }
 
 .home-intro.is-gaming-mode .hero-kicker,
 .home-intro.is-gaming-mode .home-copy {
-  color: rgba(255, 248, 251, 0.78);
+  color: var(--muted);
 }
 
 .home-intro.is-toolkit-mode {
@@ -180,13 +179,15 @@ p {
 }
 
 .home-mode-switch {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   gap: 8px;
   margin-top: 16px;
   padding: 6px;
-  border-radius: 999px;
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(32, 27, 45, 0.08);
+  flex-wrap: wrap;
 }
 
 .home-mode-option {
@@ -264,9 +265,8 @@ p {
 
 .game-mode-hero {
   background:
-    linear-gradient(135deg, rgba(32, 27, 45, 0.96), rgba(248, 90, 98, 0.82)),
+    linear-gradient(135deg, rgba(248, 90, 98, 0.1), rgba(255, 200, 61, 0.14), rgba(32, 180, 155, 0.08)),
     var(--surface);
-  color: #fff8fb;
 }
 
 .game-mode-stats {
@@ -290,9 +290,8 @@ p {
 
 .game-mode-rules {
   background:
-    linear-gradient(135deg, rgba(57, 35, 90, 0.96), rgba(47, 142, 243, 0.86)),
+    linear-gradient(135deg, rgba(47, 142, 243, 0.1), rgba(141, 87, 217, 0.1)),
     var(--surface);
-  color: #fff8fb;
 }
 
 .toolkit-mode-hero {
@@ -361,20 +360,19 @@ p {
 
 .hero-card.is-gaming-mode {
   background:
-    linear-gradient(135deg, rgba(32, 27, 45, 0.94), rgba(88, 52, 125, 0.92)),
+    linear-gradient(135deg, rgba(248, 90, 98, 0.1), rgba(255, 200, 61, 0.13), rgba(32, 180, 155, 0.08)),
     var(--surface);
-  color: #fff8fb;
 }
 
 .hero-card.is-gaming-mode .hero-copy,
 .hero-card.is-gaming-mode .stat-label,
 .hero-card.is-gaming-mode .hero-kicker {
-  color: rgba(255, 248, 251, 0.78);
+  color: var(--muted);
 }
 
 .hero-card.is-gaming-mode .ghost-button {
-  color: #fff8fb;
-  border-color: rgba(255, 248, 251, 0.24);
+  color: var(--ink);
+  border-color: rgba(32, 27, 45, 0.12);
 }
 
 .hero-card.is-toolkit-mode {

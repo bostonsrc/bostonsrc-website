@@ -590,74 +590,6 @@ main {
   line-height: 1.45;
 }
 
-.bloomrang-howto {
-  background:
-    radial-gradient(circle at 12% 10%, rgba(248, 90, 98, 0.08), transparent 32%),
-    radial-gradient(circle at 88% 12%, rgba(32, 180, 155, 0.09), transparent 30%),
-    #fffaf4;
-}
-
-.bloomrang-howto__inner {
-  display: grid;
-  gap: 2rem;
-}
-
-.bloomrang-howto__copy {
-  max-width: 50rem;
-}
-
-.bloomrang-howto__media {
-  padding: clamp(0.6rem, 2vw, 1rem);
-  border: 1px solid rgba(13, 27, 42, 0.1);
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.bloomrang-howto__media img {
-  width: 100%;
-  height: auto;
-  border: 1px solid rgba(13, 27, 42, 0.08);
-  background: #fff8f1;
-}
-
-.bloomrang-howto__steps {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.bloomrang-howto__steps article {
-  display: grid;
-  gap: 0.65rem;
-  padding: 1.2rem;
-  border: 1px solid rgba(13, 27, 42, 0.1);
-  background: rgba(255, 255, 255, 0.82);
-}
-
-.bloomrang-howto__steps span {
-  display: inline-grid;
-  place-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 999px;
-  background: #f85a62;
-  color: #fff;
-  font-weight: 800;
-}
-
-.bloomrang-howto__steps h2 {
-  margin: 0;
-  color: var(--ink);
-  font-size: 1.08rem;
-  line-height: 1.2;
-}
-
-.bloomrang-howto__steps p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.55;
-}
-
 .services-cta p {
   max-width: 46rem;
   color: var(--muted);
@@ -1228,14 +1160,6 @@ main {
     flex: 1 1 10rem;
     padding: 0.72rem 0.8rem;
     font-size: 0.86rem;
-  }
-
-  .bloomrang-howto {
-    padding-top: 2.5rem;
-  }
-
-  .bloomrang-howto__steps {
-    grid-template-columns: 1fr;
   }
 
   .bloomrang-app-page .resource-back-link {

@@ -27,10 +27,9 @@
         <section id="hero-card" class="hero-card">
           <div>
             <p class="hero-kicker" id="mode-label">Start</p>
-            <h2 id="hero-title">How do you want to begin?</h2>
+            <h2 id="hero-title">Try one Bloom's Taxonomy scenario</h2>
             <p class="hero-copy" id="hero-copy">
-              Learn Bloom's Taxonomy levels, practise the difference, or test yourself. BloomRang
-              should feel like a teacher beside you, not a textbook on a screen.
+              Read a teaching task. Choose the Bloom's Taxonomy level. See why.
             </p>
           </div>
           <div class="hero-stats">
@@ -40,20 +39,20 @@
 
         <section id="home-screen" class="home-screen">
           <div id="home-intro" class="home-intro">
-            <p class="hero-kicker">Choose</p>
-            <h3 id="home-intro-title">What do you need right now?</h3>
+            <p class="hero-kicker">Start</p>
+            <h3 id="home-intro-title">Start with one quick scenario</h3>
             <p id="home-intro-copy" class="home-copy">
-              Choose what you need right now: learn gently, test yourself, or build teaching material.
+              One teaching card. One Bloom's level. Then a clear reason.
             </p>
             <div id="home-mode-switch" class="home-mode-switch" role="tablist" aria-label="Home mode switch">
-              <button class="home-mode-option is-active" data-home-mode="learning" role="tab" aria-selected="true">
-                Learn
+              <button class="home-mode-option is-active" data-home-mode="gaming" role="tab" aria-selected="true">
+                Quick Scenario
               </button>
-              <button class="home-mode-option" data-home-mode="gaming" role="tab" aria-selected="false">
-                Play/Test
+              <button class="home-mode-option" data-home-mode="learning" role="tab" aria-selected="false">
+                Learn First
               </button>
               <button class="home-mode-option" data-home-mode="toolkit" role="tab" aria-selected="false">
-                Faculty Toolkit
+                Toolkit
               </button>
             </div>
           </div>
@@ -98,39 +97,14 @@
           <section id="home-gaming-view" class="home-mode-view" data-home-group="gaming" hidden>
             <article class="game-mode-hero">
               <div>
-                <p class="hero-kicker">Play/Test</p>
-                <h4>Skip the lesson and play</h4>
+                <p class="hero-kicker">Quick Scenario</p>
+                <h4>Can you spot the real thinking level?</h4>
                 <p class="mode-copy">
-                  Already know the basics? Play a quick round and see how sharp your Bloom's Taxonomy judgement is.
+                  Start with a card. Choose the level. Learn from the explanation.
                 </p>
               </div>
-              <div class="game-mode-stats">
-                <div class="game-stat">
-                  <span class="stat-label">Round</span>
-                  <strong>10 cards</strong>
-                </div>
-                <div class="game-stat">
-                  <span class="stat-label">Style</span>
-                  <strong>Quick match</strong>
-                </div>
-                <div class="game-stat">
-                  <span class="stat-label">Goal</span>
-                  <strong>Find your gaps</strong>
-                </div>
-              </div>
               <div class="game-mode-actions">
-                <button id="start-challenge-button" class="primary-button">Start the Round</button>
-              </div>
-            </article>
-
-            <article class="game-mode-rules">
-              <p class="hero-kicker">Game path</p>
-              <h4>Less explanation, more judgement</h4>
-              <div class="home-support-points">
-                <span class="support-pill">Quick start</span>
-                <span class="support-pill">Score at the end</span>
-                <span class="support-pill">Reasons after matching</span>
-                <span class="support-pill">Try again anytime</span>
+                <button id="start-challenge-button" class="primary-button">Start Quick Scenario</button>
               </div>
             </article>
           </section>
@@ -139,16 +113,10 @@
             <article class="toolkit-mode-hero">
               <div>
                 <p class="hero-kicker">Faculty Toolkit</p>
-                <h4>Build better teaching material</h4>
+                <h4>Improve one objective</h4>
                 <p class="mode-copy">
-                  Use this as your planning desk: verbs, question stems, and cleaner learning objectives.
+                  Paste a rough objective and get clearer Bloom's Taxonomy language.
                 </p>
-              </div>
-              <div class="home-support-points">
-                <span class="support-pill">Level guide</span>
-                <span class="support-pill">Verb library</span>
-                <span class="support-pill">Question stems</span>
-                <span class="support-pill">Objective studio</span>
               </div>
               <div class="game-mode-actions">
                 <button id="start-toolkit-button" class="primary-button">Open the Toolkit</button>
@@ -240,12 +208,15 @@
                 <h3>Plan your teaching with Bloom in mind</h3>
               </div>
               <p class="toolbox-copy">
-                Use these tools when you are planning a class, assessment, or workshop.
+                Pick one tool. Keep it simple.
               </p>
             </div>
 
             <div id="tool-tabs" class="tool-tabs" role="tablist" aria-label="Teacher toolkit tabs">
-              <button class="tool-tab is-active" data-tab="guide" role="tab" aria-selected="true">
+              <button class="tool-tab is-active" data-tab="studio" role="tab" aria-selected="true">
+                Objective studio
+              </button>
+              <button class="tool-tab" data-tab="guide" role="tab" aria-selected="false">
                 Level guide
               </button>
               <button class="tool-tab" data-tab="verbs" role="tab" aria-selected="false">
@@ -253,9 +224,6 @@
               </button>
               <button class="tool-tab" data-tab="questions" role="tab" aria-selected="false">
                 Question stems
-              </button>
-              <button class="tool-tab" data-tab="studio" role="tab" aria-selected="false">
-                Objective studio
               </button>
             </div>
 

@@ -599,6 +599,7 @@ const FALLBACK_ITEMS = [
 
 const DAILY_ROUNDS = 2;
 const ROUND_SIZE = 5;
+const QUICK_SCENARIO_TOTAL = 6;
 const DAILY_TOTAL = DAILY_ROUNDS * ROUND_SIZE;
 const STORAGE_KEY = "bloomrang-progress-v1";
 
@@ -613,8 +614,8 @@ const state = {
   selectedLevel: 3,
   selectedVerbLevel: 3,
   practiceFocus: "mixed",
-  homeMode: "learning",
-  activeToolTab: "guide",
+  homeMode: "gaming",
+  activeToolTab: "studio",
   studioInput: "",
   studioTargetLevel: "auto",
   studioResult: null,
@@ -766,8 +767,8 @@ function startLearnSession() {
 
 function startChallengeSession() {
   state.mode = "challenge";
-  const cards = selectChallengeItems(getPlayableItems(), DAILY_TOTAL);
-  state.session = buildSession(cards, "challenge");
+  const cards = selectChallengeItems(getPlayableItems(), QUICK_SCENARIO_TOTAL);
+  state.session = buildSession(cards, "challenge", { roundSize: 1 });
   resetInteractionState();
   showGameScreen();
   render();
@@ -806,6 +807,7 @@ function buildSession(items, mode, options = {}) {
     currentRoundIndex: 0,
     totalCorrect: 0,
     totalAttempts: items.length,
+    roundSize,
     revealReady: false,
     completed: false,
     results: [],
@@ -903,22 +905,22 @@ function renderHomeMode() {
   elements.homeIntro.classList.toggle("is-toolkit-mode", isToolkit);
 
   if (isLearning) {
-    elements.homeIntroTitle.textContent = "What do you need right now?";
+    elements.homeIntroTitle.textContent = "Learn before you play";
     elements.homeIntroCopy.textContent =
-      "Start with teaching, then practise one Bloom's Taxonomy level at a time.";
+      "See the six Bloom's Taxonomy levels, then try a guided card.";
     return;
   }
 
   if (isGaming) {
-    elements.homeIntroTitle.textContent = "Ready to test yourself?";
+    elements.homeIntroTitle.textContent = "Start with one quick scenario";
     elements.homeIntroCopy.textContent =
-      "No extra teaching here. Start the challenge and test your Bloom's Taxonomy judgment.";
+      "One teaching card. One Bloom's level. Then a clear reason.";
     return;
   }
 
   elements.homeIntroTitle.textContent = "Planning a class or assessment?";
   elements.homeIntroCopy.textContent =
-    "Use the toolkit to clean up objectives, verbs, and questions.";
+    "Paste an objective, improve it, and get question ideas.";
 }
 
 function renderPracticeLevelPicker() {
@@ -1191,17 +1193,17 @@ function getHeaderCopy(mode) {
     const isLearning = state.homeMode === "learning";
     const isGaming = state.homeMode === "gaming";
     return {
-      modeLabel: isLearning ? "Learn" : isGaming ? "Play/Test" : "Faculty toolkit",
+      modeLabel: isLearning ? "Learn" : isGaming ? "Quick scenario" : "Faculty toolkit",
       title: isLearning
-        ? "First, understand the 6 thinking levels"
+        ? "Learn the 6 thinking levels"
         : isGaming
-          ? "Ready? Test your Bloom's Taxonomy judgement"
-          : "Make objectives and questions sharper",
+          ? "Try one Bloom's Taxonomy scenario"
+          : "Make teaching material sharper",
       copy: isLearning
-        ? "BloomRang teaches one Bloom's Taxonomy level at a time, with examples first and matching after. No guessing, no pressure."
+        ? "Tap each level, see a simple example, then play a guided card."
         : isGaming
-          ? "Jump into a quick matching challenge. You will see where your Bloom's Taxonomy thinking is strong and where it needs work."
-          : "Paste an objective, explore verbs, and build better questions for each Bloom's Taxonomy level.",
+          ? "Read a real teaching task. Choose the Bloom's Taxonomy level. BloomRang explains why."
+          : "Use the toolkit when you are writing objectives, verbs, or assessment questions.",
     };
   }
 
@@ -1226,9 +1228,9 @@ function getHeaderCopy(mode) {
   if (mode === "toolkitHub") {
     return {
       modeLabel: "Faculty toolkit",
-      title: "Turn rough teaching ideas into better Bloom's Taxonomy tasks",
+      title: "Improve one objective first",
       copy:
-        "Use this when you are writing objectives, choosing verbs, or building questions for your learners.",
+        "Paste a rough objective. BloomRang suggests cleaner wording and question ideas.",
     };
   }
 
@@ -1258,9 +1260,9 @@ function getHeaderCopy(mode) {
 
   return {
     modeLabel: "Challenge mode",
-    title: "Match fast, then learn from the reasons",
+    title: "Match one card at a time",
     copy:
-      "This is the game path. Trust the task, not only the verb, and see how cleanly you can classify the set.",
+      "Read the task, choose the Bloom's Taxonomy level, then learn from the reason.",
   };
 }
 
@@ -1278,6 +1280,10 @@ function getCardsHelperText() {
 
   if (session.mode === "learn") {
     return "Tap the card, then tap the level you think fits. BloomRang will check it right away.";
+  }
+
+  if (count === 1) {
+    return "Match this card, then read the reason.";
   }
 
   return session.mode === "challenge"
@@ -1745,7 +1751,7 @@ function renderResultIfNeeded() {
   const total = state.session.totalAttempts;
   const correct = state.session.totalCorrect;
   const rank = getRank(correct, total);
-  const grid = formatEmojiGrid(state.session.results, ROUND_SIZE);
+  const grid = formatEmojiGrid(state.session.results, state.session.roundSize || ROUND_SIZE);
   const shareText = buildShareText({
     mode: state.session.mode,
     dateKey: state.dailyDateKey,
