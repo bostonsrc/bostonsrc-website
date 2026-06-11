@@ -134,6 +134,23 @@ export const leadershipProfiles = [
 
 export const advisoryProfiles = [
   {
+    name: "Thomas J. Caruso",
+    title: "Professor of Pediatric Anesthesiology",
+    institution: "Stanford School of Medicine",
+    country: "USA",
+    image: "/thomas-caruso.jpg",
+    bio: "Dr. Thomas J. Caruso is a Professor of Pediatric Anesthesiology at Lucile Packard Children's Hospital Stanford and Vice Chair of Education for the Department of Anesthesiology. He teaches at Stanford School of Medicine and is co-founder and co-Director of the Stanford Chariot Program, which uses immersive technologies, including augmented and virtual reality, to reduce pain and stress, support rehabilitation, and enhance education. Chariot Program technologies are used in more than 50 hospitals in the United States and over 75 international sites, including limited-resource settings. He holds a bachelor's degree in biochemistry from the University of Virginia, a master's degree in medical education from Johns Hopkins University, and an MD and PhD in education from Stanford University.",
+    expertise: [
+      "Immersive technology",
+      "Medical education",
+      "Extended reality",
+      "Simulation",
+      "Analgesia and anxiolysis"
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/thomas-caruso-60684229a/"
+  },
+  {
     name: "Leah Fabiano",
     title: "Professor and PhD Program Director",
     institution: "University of Pittsburgh, School of Health and Rehabilitation Sciences",
