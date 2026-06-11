@@ -26,11 +26,9 @@ export default function BloomRangResourcePage() {
           </div>
           <div className="resource-tool-hero__actions">
             <a className="button" href="/bloomrang/" target="_blank" rel="noopener noreferrer">
-              Click here for mobile version
+              Open BloomRang
             </a>
-            <a className="button button--secondary" href="/bloomrang/" target="_blank" rel="noopener noreferrer">
-              Desktop version
-            </a>
+            <p className="resource-device-note">Opens automatically in the right layout for mobile or desktop.</p>
             <Link className="button button--secondary resource-back-link" href="/resources">
               Back to resources
             </Link>

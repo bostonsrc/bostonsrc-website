@@ -16,4 +16,5 @@ coverage/
 
 vercel.json
 .open-next/
+.wrangler/
 cloudflare-env.d.ts

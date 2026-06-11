@@ -581,6 +581,15 @@ main {
   justify-content: center;
 }
 
+.resource-device-note {
+  flex-basis: 100%;
+  max-width: 19rem;
+  margin: -0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
 .services-cta p {
   max-width: 46rem;
   color: var(--muted);
