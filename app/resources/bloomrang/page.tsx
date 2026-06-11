@@ -35,6 +35,41 @@ export default function BloomRangResourcePage() {
           </div>
         </div>
       </section>
+      <section className="section section--tight-top bloomrang-howto">
+        <div className="shell bloomrang-howto__inner">
+          <div className="bloomrang-howto__copy">
+            <p className="eyebrow">How to use it</p>
+            <h1 className="section-title">A quick guide for first-time users</h1>
+            <p className="lead lead--compact">
+              Share this short visual guide with educators before they open BloomRang.
+              It shows the full flow: choose a mode, learn the levels, match cards, and use the toolkit.
+            </p>
+          </div>
+          <div className="bloomrang-howto__media">
+            <img
+              src="/bloomrang/how-to-use-bloomrang.gif"
+              alt="Animated guide showing how to use BloomRang"
+            />
+          </div>
+          <div className="bloomrang-howto__steps" aria-label="BloomRang usage steps">
+            <article>
+              <span>1</span>
+              <h2>Choose a mode</h2>
+              <p>Start with Learn, Play/Test, or the Faculty Toolkit.</p>
+            </article>
+            <article>
+              <span>2</span>
+              <h2>Match the card</h2>
+              <p>Tap a card, then tap the Bloom&apos;s Taxonomy level that fits.</p>
+            </article>
+            <article>
+              <span>3</span>
+              <h2>Read the reason</h2>
+              <p>The feedback explains the thinking level, not just the answer.</p>
+            </article>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
