@@ -1232,12 +1232,13 @@ button:not(:disabled):hover {
 }
 
 .site-footer-credit {
-  margin-top: 4px;
-  padding: 10px 4px 0;
+  margin-top: clamp(72px, 16vh, 150px);
+  padding: 18px 4px 0;
   text-align: center;
   color: var(--muted);
   font-size: 0.92rem;
   font-weight: 600;
+  line-height: 1.65;
 }
 
 .site-footer-credit a {
@@ -1354,6 +1355,12 @@ button:not(:disabled):hover {
 
   .brand-logo {
     width: min(88vw, 320px);
+  }
+
+  .site-footer-credit {
+    margin-top: 56px;
+    padding-bottom: 18px;
+    font-size: 0.84rem;
   }
 
   .cards-panel,
