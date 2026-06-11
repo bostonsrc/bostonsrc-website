@@ -113,9 +113,9 @@ export const leadershipProfiles = [
     image: "/waqar-naqvi.png",
     credentials:
       "PhD (Health Professions Education), PhD (Physiotherapy), International FAIMER Fellow, FIAP",
-    bio: "Waqar M. Naqvi is an international scholar, educator, and research leader whose work spans health professions education, evidence synthesis, generative AI in academic systems, and interdisciplinary research development. Through academic, research, and collaborative work across the Gulf region, India, Saudi Arabia, and Cameroon, he has contributed to research mentoring systems, strengthened postgraduate supervision, and supported the development of scholarly culture across diverse educational and health contexts.",
+    bio: "Waqar M. Naqvi is a scholar, educator, and research leader working across health professions education, evidence synthesis, generative AI in academic systems, and interdisciplinary research development. His work focuses on supporting researchers, postgraduate scholars, and academic teams through clearer methods, stronger supervision practices, and sustainable scholarly culture across diverse educational and health contexts, including collaborations connected to the Gulf region, India, Saudi Arabia, and Cameroon.",
     highlights: [
-      "200+ publications, 1,800+ citations, h-index 22, and four granted patents",
+      "Contributed to 200+ publications, 1,800+ citations, h-index 22, and four granted patents",
       "Led the PhyCARE international reporting guideline, published in BMJ Open and listed on the EQUATOR Network",
       "International FAIMER Fellow focused on evidence synthesis, AI integration, and scalable learning systems"
     ],
