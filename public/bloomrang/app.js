@@ -1511,6 +1511,8 @@ function createCardElement(card) {
   const element = elements.cardTemplate.content.firstElementChild.cloneNode(true);
   element.dataset.cardId = card.id;
   element.dataset.cardKind = card.type;
+  element.setAttribute("role", "button");
+  element.setAttribute("aria-label", `${card.type === "objective" ? "Objective" : "Question"} card: ${card.text}`);
   const rank = card.type === "objective" ? "O" : "Q";
   const suit = card.type === "objective" ? "TASK" : "ASK";
   element.querySelectorAll(".card-rank").forEach((node) => {
@@ -1534,6 +1536,7 @@ function createCardElement(card) {
   if (state.selectedCardId === card.id) {
     element.classList.add("is-selected");
   }
+  element.setAttribute("aria-pressed", String(state.selectedCardId === card.id));
 
   element.addEventListener("click", () => {
     if (state.session.revealReady) return;
