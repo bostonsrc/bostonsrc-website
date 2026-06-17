@@ -237,6 +237,23 @@ export const advisoryProfiles = [
     linkedinUrl: "https://www.linkedin.com/in/michael-rowe-phd/"
   },
   {
+    name: "Bohdanna \"Billie\" Zazulak",
+    title: "Physical Therapist and Research Scientist",
+    institution: "Yale University School of Medicine and Yale New Haven Hospital",
+    country: "USA",
+    image: "/bohdanna-zazulak.jpg",
+    bio: "Dr. Bohdanna \"Billie\" Zazulak, DPT, MS, OCS, is a physical therapist, researcher, educator, and author with more than 30 years of clinical experience. She is a physical therapist and research scientist at Yale New Haven Hospital and Yale University School of Medicine. Her work focuses on injury prevention, biomechanics, resilience, and optimizing human performance across the lifespan. She has authored peer-reviewed publications and educational resources and has received awards for contributions to research, education, and authorship. An Orthopaedic Certified Specialist since 2003, she translates science into practical strategies that help people move better, recover stronger, and thrive.",
+    expertise: [
+      "Injury prevention",
+      "Sports medicine",
+      "Biomechanics",
+      "Orthopaedic rehabilitation",
+      "Human performance"
+    ],
+    linkedinLabel: "LinkedIn profile",
+    linkedinUrl: "https://www.linkedin.com/in/bohdannazazulak/"
+  },
+  {
     name: "Mehrunishah Begum",
     title: "Senior Lecturer and Program Director",
     institution: "IMU University, School of Business and Technology",
