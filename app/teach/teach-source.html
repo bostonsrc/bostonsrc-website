@@ -107,6 +107,11 @@
     .field input:focus, .field select:focus { outline: none; border-color: var(--green); }
     .field input::placeholder { color: var(--text-secondary); opacity: 0.55; }
     .intro-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.72; margin-bottom: 1.75rem; padding: 1.1rem 1.3rem; background: var(--bg-secondary); border-radius: 10px; }
+    .intro-desc p { margin-bottom: 0.85rem; }
+    .intro-desc p:last-child { margin-bottom: 0; }
+    .intro-steps { display: grid; gap: 7px; margin-top: 0.9rem; }
+    .intro-step { display: flex; align-items: flex-start; gap: 9px; }
+    .intro-step i { color: var(--green); font-size: 16px; margin-top: 3px; flex-shrink: 0; }
     .intro-desc strong { color: var(--text-primary); font-weight: 500; }
     .privacy-note { font-size: 12px; color: var(--text-secondary); margin-top: -0.5rem; margin-bottom: 1.25rem; line-height: 1.55; display: flex; align-items: flex-start; gap: 7px; }
     .privacy-note i { color: var(--green); margin-top: 1px; flex-shrink: 0; }
@@ -238,7 +243,7 @@
 
     let state = {
       step: 0,
-      participant: { name: "", email: "", profession: "", country: "", years: "", role: "" },
+      participant: { name: "", email: "", country: "" },
       ratings: {},
       comments: {},
       finalComment: "",
@@ -291,32 +296,18 @@
       return `${hero()}${progress()}${dots()}<div class="body">
         <div class="sec-eyebrow"><span class="sec-pill">Welcome</span></div>
         <div class="sec-title">Before we begin</div>
-        <div class="intro-desc">You are invited as an expert panel member to establish consensus on the <strong>TEACH checklist</strong>. For each item, rate your agreement that it <strong>should be included</strong> in the final guideline &mdash; 1 meaning Strongly disagree through to 5 meaning Strongly agree. Items marked <strong style="color:var(--blue)">HPE-specific</strong> are novel to health professions education and warrant your closest attention.</div>
+        <div class="intro-desc">
+          <p>You are invited as an expert panel member to review the <strong>TEACH checklist</strong> and help establish consensus on the items proposed for inclusion.</p>
+          <div class="intro-steps">
+            <div class="intro-step"><i class="ti ti-circle-number-1"></i><span>For each item, rate whether it <strong>should be included</strong> in the final guideline.</span></div>
+            <div class="intro-step"><i class="ti ti-circle-number-2"></i><span>Use the 1 to 5 scale, where 1 means Strongly disagree and 5 means Strongly agree.</span></div>
+            <div class="intro-step"><i class="ti ti-circle-number-3"></i><span>Items marked <strong style="color:var(--blue)">HPE-specific</strong> are novel to health professions education and warrant your closest attention.</span></div>
+          </div>
+        </div>
         <div class="pform">
           <div class="field pform-full"><label>Full name</label><input id="p-name" type="text" value="${p.name}" placeholder="Your full name"></div>
           <div class="field pform-full"><label>Email address</label><input id="p-email" type="email" value="${p.email}" placeholder="name@institution.edu"></div>
-          <div class="field"><label>Health profession or discipline</label><input id="p-prof" type="text" value="${p.profession}" placeholder="e.g. Medicine, Nursing, Pharmacy"></div>
-          <div class="field"><label>Country of current employment</label><input id="p-country" type="text" value="${p.country}" placeholder="Country"></div>
-          <div class="field"><label>Years in HPE research</label>
-            <select id="p-years">
-              <option value="">Select</option>
-              <option ${p.years === "Less than 5 years" ? "selected" : ""}>Less than 5 years</option>
-              <option ${p.years === "5 to 10 years" ? "selected" : ""}>5 to 10 years</option>
-              <option ${p.years === "11 to 20 years" ? "selected" : ""}>11 to 20 years</option>
-              <option ${p.years === "More than 20 years" ? "selected" : ""}>More than 20 years</option>
-            </select>
-          </div>
-          <div class="field"><label>Primary role</label>
-            <select id="p-role">
-              <option value="">Select</option>
-              <option ${p.role === "Clinician-educator" ? "selected" : ""}>Clinician-educator</option>
-              <option ${p.role === "Academic faculty" ? "selected" : ""}>Academic faculty</option>
-              <option ${p.role === "Researcher" ? "selected" : ""}>Researcher</option>
-              <option ${p.role === "Postgraduate student" ? "selected" : ""}>Postgraduate student</option>
-              <option ${p.role === "Journal editor or reviewer" ? "selected" : ""}>Journal editor or reviewer</option>
-              <option ${p.role === "Other" ? "selected" : ""}>Other</option>
-            </select>
-          </div>
+          <div class="field pform-full"><label>Country of current employment</label><input id="p-country" type="text" value="${p.country}" placeholder="Country"></div>
         </div>
         <div class="privacy-note"><i class="ti ti-lock"></i><span>Your email is collected only so the research team can invite you to the next Delphi round. It will not be shared or used for any other purpose.</span></div>
         <div id="intro-alert"></div>
@@ -381,7 +372,6 @@
           <div class="summ-title">Your submission</div>
           <div class="summ-row"><span class="summ-k">Name</span><span class="summ-v">${state.participant.name}</span></div>
           <div class="summ-row"><span class="summ-k">Email</span><span class="summ-v">${state.participant.email}</span></div>
-          <div class="summ-row"><span class="summ-k">Profession</span><span class="summ-v">${state.participant.profession}</span></div>
           <div class="summ-row"><span class="summ-k">Country</span><span class="summ-v">${state.participant.country}</span></div>
           <div class="summ-row"><span class="summ-k">Items rated</span><span class="summ-v" style="color:${done ? 'var(--green)' : '#e07800'}">${r} of ${t}</span></div>
         </div>
@@ -419,11 +409,8 @@
     function nextIntro() {
       const name = document.getElementById('p-name').value.trim();
       const email = document.getElementById('p-email').value.trim();
-      const prof = document.getElementById('p-prof').value.trim();
       const country = document.getElementById('p-country').value.trim();
-      const years = document.getElementById('p-years').value;
-      const role = document.getElementById('p-role').value;
-      if (!name || !email || !prof || !country || !years || !role) {
+      if (!name || !email || !country) {
         document.getElementById('intro-alert').innerHTML = '<div class="alert alert-warn"><i class="ti ti-alert-triangle"></i> Please complete all fields before continuing.</div>';
         return;
       }
@@ -431,7 +418,7 @@
         document.getElementById('intro-alert').innerHTML = '<div class="alert alert-warn"><i class="ti ti-alert-triangle"></i> Please enter a valid email address.</div>';
         return;
       }
-      state.participant = { name, email, profession: prof, country, years, role };
+      state.participant = { name, email, country };
       state.step = 1; render(); window.scrollTo(0, 0);
     }
 
@@ -462,10 +449,7 @@
       formData.append('replyto', state.participant.email);
       formData.append('Participant name', state.participant.name);
       formData.append('Email', state.participant.email);
-      formData.append('Profession', state.participant.profession);
       formData.append('Country', state.participant.country);
-      formData.append('Years in HPE research', state.participant.years);
-      formData.append('Role', state.participant.role);
       formData.append('Submitted at', new Date().toISOString());
 
       SECTIONS.forEach(sec => {
