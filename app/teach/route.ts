@@ -1,9 +1,6 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
+import html from "./teach-html";
 
 export const dynamic = "force-static";
-
-const html = readFileSync(join(process.cwd(), "app/teach/teach-source.html"), "utf8");
 
 export function GET() {
   return new Response(html, {
