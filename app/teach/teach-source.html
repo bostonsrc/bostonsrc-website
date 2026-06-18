@@ -271,7 +271,11 @@
 
     function progress() {
       const sec = SECTIONS[state.step];
-      const label = state.step === 0 ? 'Getting started' : `Section ${state.step} of ${SECTIONS.length - 2} &mdash; ${sec.label}`;
+      const label = state.step === 0
+        ? 'Getting started'
+        : sec.type === 'final'
+          ? `Final review &mdash; ${sec.label}`
+          : `Section ${state.step} of ${SECTIONS.length - 2} &mdash; ${sec.label}`;
       return `<div class="prog-wrap">
         <div class="prog-track"><div class="prog-fill" id="pfill" style="width:${pct()}%"></div></div>
         <div class="prog-row">
