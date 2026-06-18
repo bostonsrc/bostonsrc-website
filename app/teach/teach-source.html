@@ -355,7 +355,7 @@
       <div id="sec-alert"></div>
       <div class="nav">
         <button class="btn btn-ghost" onclick="goBack()"><i class="ti ti-arrow-left"></i> Back</button>
-        <button class="btn btn-primary" onclick="nextSection(${JSON.stringify(sec.items.map(i => i.n))})">Continue <i class="ti ti-arrow-right"></i></button>
+        <button class="btn btn-primary" onclick="nextSection()">Continue <i class="ti ti-arrow-right"></i></button>
       </div></div>`;
       return h;
     }
@@ -427,7 +427,8 @@
       state.step = 1; render(); window.scrollTo(0, 0);
     }
 
-    function nextSection(nums) {
+    function nextSection() {
+      const nums = SECTIONS[state.step].items.map(i => i.n);
       const sk = `sec_${SECTIONS[state.step].id}`;
       const ta = document.getElementById(sk);
       if (ta) state.comments[sk] = ta.value;
