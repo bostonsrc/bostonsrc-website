@@ -253,6 +253,16 @@
 
     function totalItems() { let n = 0; SECTIONS.forEach(s => { if (s.items) n += s.items.length; }); return n; }
     function ratedItems() { return Object.keys(state.ratings).length; }
+    function missingRatings() {
+      const missing = [];
+      SECTIONS.forEach(sec => {
+        if (!sec.items) return;
+        sec.items.forEach(item => {
+          if (state.ratings[`item_${item.n}`] === undefined) missing.push(item.n);
+        });
+      });
+      return missing;
+    }
     function pct() { return Math.round((state.step / (SECTIONS.length - 1)) * 100); }
     function validEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
 
@@ -449,6 +459,12 @@
 
     async function submitForm() {
       if (document.getElementById('final-comment')) state.finalComment = document.getElementById('final-comment').value;
+      const missing = missingRatings();
+      if (missing.length > 0) {
+        const el = document.getElementById('submit-result');
+        if (el) el.innerHTML = `<div class="alert alert-warn" style="margin-top:1rem"><i class="ti ti-alert-triangle"></i> Please complete all rating items before submitting. Missing: <strong>Item ${missing.join(', Item ')}</strong>.</div>`;
+        return;
+      }
       const btn = document.getElementById('submit-btn');
       if (btn) { btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Submitting...'; }
 
