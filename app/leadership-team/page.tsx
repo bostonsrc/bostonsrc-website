@@ -173,13 +173,6 @@ export default function LeadershipTeamPage() {
                     <p className="profile-credentials">{primaryLeader.credentials}</p>
                   ) : null}
                   <p>{primaryLeader.bio}</p>
-                  {"highlights" in primaryLeader && primaryLeader.highlights ? (
-                    <ul className="editorial-list profile-highlights">
-                      {primaryLeader.highlights.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  ) : null}
                 </div>
               </article>
             </div>

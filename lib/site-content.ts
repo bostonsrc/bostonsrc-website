@@ -113,12 +113,7 @@ export const leadershipProfiles = [
     image: "/waqar-naqvi.png",
     credentials:
       "PhD (Health Professions Education), PhD (Physiotherapy), International FAIMER Fellow, FIAP",
-    bio: "Waqar M. Naqvi is a scholar, educator, and research leader working across health professions education, evidence synthesis, generative AI in academic systems, and interdisciplinary research development. His work focuses on supporting researchers, postgraduate scholars, and academic teams through clearer methods, stronger supervision practices, and sustainable scholarly culture across diverse educational and health contexts, including collaborations connected to the Gulf region, India, Saudi Arabia, and Cameroon.",
-    highlights: [
-      "Contributed to 200+ publications, 1,800+ citations, h-index 22, and four granted patents",
-      "Led the PhyCARE international reporting guideline, published in BMJ Open and listed on the EQUATOR Network",
-      "International FAIMER Fellow focused on evidence synthesis, AI integration, and scalable learning systems"
-    ],
+    bio: "Waqar M. Naqvi directs Boston Scientific Research Center, which he founded to strengthen research methods, supervision, and reporting standards across health professions education and evidence synthesis. He holds doctoral degrees in Physiotherapy and Health Professions Education and is an International FAIMER Fellow. He led PhyCARE, the international reporting guideline published in BMJ Open and listed on the EQUATOR Network, and works with the global community advancing AI in health professions education.",
     linkedinLabel: "LinkedIn profile",
     linkedinUrl: "https://www.linkedin.com/in/waqarnaqvi/"
   },
